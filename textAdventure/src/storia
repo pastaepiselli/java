@@ -1,0 +1,36 @@
+Gioco da terminale dungeon crawler tipo:
+
+Ambientazione:
+	- Torvaianica
+
+Protagonista:
+	- Popa 
+
+Storia:
+	- Popa dopo una serata a San lorenzo si sveglia frastornato in un ospedale con un braccio robotico, non ricorda niente ma sente 
+	che ce qualcosa di sbagliato. Perche ha quel braccio? Chi lo ha montato? cosi smette di farsi domande si toglie la flebo e si alza.
+	E scalzo il pavimento e freddo e ha solo una vestaglia, le finestre sono tutte chiuse non si capisce se e giorno o notte. Si osserva 
+	Dal braccio si accende una luce azzurra e come per magia inizia a uovere le dita, sentendo il rumore meccanico delle parti del suo nuovo
+	braccio.
+	
+	Rimani o esci?
+	
+	- Rimani: Gioco finisce...
+	- Esci: continua
+	
+	- Popa esce dalla stanza, ma prima prende un oggetto, l'ospedale sembra deserto, non ci sono infermiere/i che girano per i corridoi, la reception e vuota, in fondo al corridoio 
+	ce un ascensore (la luce e accesa), un cartello sul muro indica il 2 piano, ancora confuso dal brusco risveglio decide di:
+	
+	Prendi Scale o ascensore:
+	
+	- Prendi Scale:
+		boh
+	
+	- Ascensore:
+		- ci sono 5 bottoni:
+			- 4 
+			- 3 
+			- 2 (piano attuale)
+			- 1 
+			- -1 (necessario badge)
+		

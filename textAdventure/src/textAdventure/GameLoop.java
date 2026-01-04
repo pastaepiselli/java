@@ -1,0 +1,153 @@
+package textAdventure;
+
+import java.util.Scanner;
+
+public class GameLoop {
+
+    // Prints text one character at a time
+    public static void printText(String text) throws InterruptedException {
+        System.out.println();
+        for (char c : text.toCharArray()) {
+            System.out.print(c);
+            Thread.sleep(50);
+        }
+    }
+
+    // Prints italic “popa style” text one char at a time
+    public void popaText(String text) {
+        System.out.println();
+        for (char c : text.toCharArray()) {
+            System.out.printf("\033[3m%s\033[0m", c);
+            try {
+                Thread.sleep(80);
+            } catch (InterruptedException e) {
+                // Restore interrupt status
+                Thread.currentThread().interrupt();
+                return;
+            }
+        }
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        GameLoop game = new GameLoop();
+        int hp = 100;
+        String arma = null;
+        double hashish = 0.0;
+        String[] inventario = new String[5];
+
+        game.capitolo2();
+        game.startGame();
+        game.printStats(hp, arma, hashish, inventario);
+        
+        
+    }
+    
+    public static void printPickUp(String text) {
+    	System.out.println();
+    	for (char c : text.toCharArray()) {
+    		System.err.print(c);
+    		try {
+    			Thread.sleep(80);
+    		} catch (InterruptedException e) {
+    			Thread.currentThread().interrupt();
+    			return;
+    		}
+    	}
+    }
+
+    public void printStats(int hp, String arma, double fumo, String[] inventario) throws InterruptedException {
+        printText("Hp: " + hp);
+        printText("Arma: " + (arma == null ? "Nessuna" : arma));
+        printText("Hashish: " + fumo);
+        printText("Inventario: ");
+        
+        
+        for (String e : inventario) {
+        	if (e == null) {
+        		printText("Vuoto");
+        	} else {
+        		printText(e);
+        	}
+        	
+        }
+    }
+
+    public void startGame() throws InterruptedException {
+        Scanner sc = new Scanner(System.in);
+
+        printText("Bep... Bep... Bep... Bep...");
+        printText("Popa si risveglia nell'ospedale.");
+        printText("La sua vista si spanna, ha un'emicrania molto forte.");
+
+        popaText("Cosa ci faccio qui? Ieri sera ero andato a San Lollo con i miei amici...");
+
+        printText("Ancora confuso si guarda attorno, la stanza è vuota. Ora si accorgerà che...");
+
+        popaText("AAAAAAAAAA CHE COSA È SUCCESSO AL BRACCIO!!!!");
+
+        printText("Popa si è risvegliato con un braccio robotico.");
+        printText("Non sembra funzionare ma è fichissimo (e Popa è già molto bello di suo).");
+
+        popaText("Ok devo capire che cazzo sta succedendo.");
+
+        System.out.println();
+        printText("--------------------------------");
+        System.out.println();
+
+        printText("Cosa fai?");
+        printText("- 1 ti alzi dal letto per cercare risposte.");
+        printText("- 2 rimani a letto aspettando un infermiere.");
+        System.out.print("Scelta: ");
+
+        int choice = sc.nextInt();
+
+        if (choice == 1) {
+            printText("Ancora stordito Popa si alza dal letto e qui inizia la sua avventura...");
+        } else {
+            printText("Popa ha scelto di rimanere a letto. Prende il telefono, ma si rende conto che con un braccio solo non può giocare a Brawl Stars.");
+            printText("Quindi, ancora stordito, Popa si alza dal letto e qui inizia la sua avventura...");
+        }
+
+        System.out.println();
+        System.out.println("-------------------");
+        printText("Fine capitolo 1");
+        System.out.println();
+
+        sc.close();
+    }
+    public void capitolo2() throws InterruptedException {
+    	
+    	Scanner sc = new Scanner(System.in);
+    	
+    	printText("Popa predende i suoi averi dal comodino");
+    	
+    	printPickUp("+1.5 hashish.");
+    	printPickUp("+1 Sigarette.");
+    	printPickUp("+1 Coltello a farfalla.");
+    	
+    	popaText("Questo puo tornarmi utile.");
+    	
+    	printText("Popa esce dalla stanza, il corridoio e deserto.");
+    	printText("In fondo al corridoio ce un ascensore");
+    	printText("Le altre stanze sembrano vuote.");
+    	
+    	printText("Cosa scegli?");
+    	printText("- 1 Dirigiti verso l'ascensore");
+    	printText("- 2 Esplora le altre stanze");
+    	
+    	int choice = sc.nextInt();
+    	
+    	if (choice == 1) {
+    		printText("Lentamente Popa si dirige verso l'ascensore");
+    		printText("");
+    	}
+    	
+    	
+    	
+    	
+    	
+    
+    	
+    	    	
+    }
+}
