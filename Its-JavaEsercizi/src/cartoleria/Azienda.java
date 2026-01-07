@@ -1,9 +1,32 @@
 package cartoleria;
 
 public class Azienda extends Cliente {
-
-	public Azienda() {
-		// TODO Auto-generated constructor stub
+	private double saldo;
+	public Azienda(String anagrafica, double saldo) {
+		super(anagrafica);
+		this.setSaldo(saldo);
 	}
+
+	@Override
+	public void paga(double importo) {
+		// devo aggiungere il 10% di commissione
+		double commissione = importo/10;
+		saldo = saldo - (importo + commissione);
+
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
+	@Override
+	public String toString() {
+		return "Azienda: " + super.toString() + ", saldo=" + this.getSaldo();
+	}
+	
 
 }

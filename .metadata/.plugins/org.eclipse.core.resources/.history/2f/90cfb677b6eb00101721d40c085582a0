@@ -1,0 +1,16 @@
+package cartoleria;
+
+public class Private extends Cliente {
+
+	public Private(String anagrafica) {
+		super(anagrafica);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void paga(double importo) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

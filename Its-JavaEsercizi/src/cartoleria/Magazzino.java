@@ -79,6 +79,5 @@ public class Magazzino {
 		}
 	}
 	
-	public void ordinaPerCosto() {
 
 }

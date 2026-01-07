@@ -51,11 +51,8 @@ public class Main {
 				Cerchio cer = new Cerchio(raggio);
 				figura = "Cerchio";
 			}
-
-
-
 		}
 	}
 }
 
-}
+

@@ -1,0 +1,6 @@
+INDEX VERSION 1.134+/home/lorenzo/dev/java/.metadata/.plugins/org.eclipse.jdt.core
+789297030.index
+3450877826.index
+3251189429.index
+3018271341.index
+1865797976.index

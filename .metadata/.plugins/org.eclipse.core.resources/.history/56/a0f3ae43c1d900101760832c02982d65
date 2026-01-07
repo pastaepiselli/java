@@ -1,0 +1,100 @@
+package oggetti;
+
+public class Tamagotchi {
+	String nome;
+	String specie;
+	int peso;
+	int altezza;
+	int energia;
+
+	public Tamagotchi(String nome, String specie) {
+		this.nome = nome;
+		energia = 3;
+		switch(specie.toLowerCase()) {
+		case "cane":
+			altezza = 20;
+			peso = 300;
+			this.specie = "Cane";
+			break;
+
+		case "gatto":
+			altezza = 10;
+			peso = 100;
+			this.specie = "Gatto";
+			break;
+
+		case "canarino":
+			altezza = 3;
+			peso = 100;
+			this.specie = "Canarino";
+			break;
+
+		case "coniglio":
+			altezza = 10;
+			peso = 100;
+			this.specie = "Coniglio";
+			break;
+
+		default:
+			altezza = 20;
+			peso = 300;
+			this.specie = "Cane";
+			break;	
+		}
+	}
+	public Tamagotchi(String nome) {
+		this.nome = nome;
+		altezza = 20;
+		peso = 300;
+		energia = 3;
+		this.specie = "Cane";
+	}
+	public boolean mangia() {
+		if (this.energia + 1 > 10) {
+			return false;
+		} else {
+			this.altezza++;
+			this.peso += 150;
+			this.energia++;
+			return true;
+		}
+	}
+	public boolean dorme() {
+		if (this.energia + 1 > 10) {
+			return false;
+		} else {
+			this.energia++;
+			return true;
+		}
+	}
+	public boolean gioca() {
+		if (this.energia-- < 1) {
+			return false;
+		} else {
+			this.energia--;
+			return true;
+		}
+	}
+	@Override
+	public String toString() {
+		return "\n"
+				+ "\n"
+				+ "          __O__\n"
+				+ "        .'     '.\n"
+				+ "      .'         '.\n"
+				+ "     .  _________  .\n"
+				+ "     : |   .-.   | :\n"
+				+ "    :  |  ( - )  |  :\n"
+				+ "    :  |   \" \"   |  :\n"
+				+ "    :  |_________|  :\n"
+				+ "     |             |\n"
+				+ "     '   O     O   '\n"
+				+ "      ',    O    ,'\n"
+				+ "        '.......'";
+		
+	}
+	
+
+}
+
+

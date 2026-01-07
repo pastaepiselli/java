@@ -1,6 +1,6 @@
 package cartoleria;
 
-public class Articolo {
+public abstract class Articolo {
 	private String marca;
 	private String modello;
 	private double costo;
