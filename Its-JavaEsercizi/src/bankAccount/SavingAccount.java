@@ -1,0 +1,59 @@
+package bankAccount;
+
+import java.time.LocalDate;
+
+public class SavingAccount extends BankAccount {
+	private double interestRate;
+	private int max_daily_withdraw;
+
+	public SavingAccount(String holder, double initialDeposit, double interestRate, int max_daily_withdraw) {
+		super(holder, initialDeposit);
+		this.interestRate = interestRate;
+		this.max_daily_withdraw = max_daily_withdraw;
+	}
+
+	public SavingAccount(String holder, double interestRate, int max_daily_withdraw) {
+		super(holder);
+		this.interestRate = interestRate;
+		this.max_daily_withdraw = max_daily_withdraw;
+
+	}
+
+	public void handleMovement(Movement m) {
+
+		if (m.getType() == Type.withdrawal) {
+			int mov_today = 0;
+			for (Movement movement : this.getMovements()) {
+				if (movement.getDate().equals(LocalDate.now()) && movement.getType() == Type.withdrawal) {
+					mov_today++;
+				}
+			}
+
+			if (mov_today >= this.max_daily_withdraw) {
+				throw new IllegalArgumentException("Max withdrawal reached today");
+			}
+		}
+		super.handleMovement(m);
+	}
+
+	public void addInterestRate() {
+		double interest = this.getBalance() * this.interestRate;
+		
+		if (interest > 0) {
+			Movement interestMovement = new Movement(Type.deposit, LocalDate.now(), interest);
+			super.handleMovement(interestMovement);
+		}
+		
+		
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() + ", interest rate=" + interestRate + ", max daily withdraw=" + max_daily_withdraw;
+	}
+
+
+
+
+
+}
