@@ -1,0 +1,91 @@
+package bankAccount;
+
+import java.util.ArrayList;
+
+public class BankAccount {
+	static int counter;
+	private String holder;
+	private int num;
+	private double balance;
+	private ArrayList<Movement> movements;
+
+	public BankAccount(String holder) {
+		this.holder = holder;
+		this.balance = 0;
+		this.movements = new ArrayList<Movement>();
+		this.num = counter;
+		counter++;
+	}
+
+	public BankAccount(String holder, double initialDeposit) {
+		if (initialDeposit <= 0) {
+			throw new IllegalArgumentException("Initial deposit must be greater than 0");
+			}
+		this.holder = holder;
+		this.balance = initialDeposit;
+		this.movements = new ArrayList<Movement>();
+		this.num = counter;
+		counter++;
+	}
+	
+	
+	public String getHolder() {
+		return holder;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public ArrayList<Movement> getMovements() {
+		return movements;
+	}
+
+	public void handleMovement(Movement m) {
+		switch (m.getType()) {
+        case Type.deposit:
+            balance += m.getAmount();
+            this.movements.add(m);
+            break;
+
+        case Type.withdrawal:
+            if (m.getAmount() > this.balance) {
+                throw new IllegalStateException("Insufficient funds");
+            }
+            balance += m.getAmount();
+            this.movements.add(m);
+            break;
+		}
+	}
+	
+	public boolean checkBalance() {
+		int sum = 0;
+		for (Movement m : this.movements) {
+			if (m.getType() == Type.deposit) {
+				sum += m.getAmount();
+			} else if (m.getType() == Type.withdrawal) {
+				sum += m.getAmount();
+			}
+		}
+		
+		if (sum == this.balance) {
+			return true;
+		}
+		
+		return false;
+	}
+	
+	public void showMovementList(){
+		for (Movement m : this.movements) {
+			System.out.println(m);
+		}
+	}
+
+	@Override
+	public String toString() {
+		return "BankAccount [holder=" + holder + ", num=" + num + ", balance=" + balance + "]";
+	}
+	
+	
+	
+}

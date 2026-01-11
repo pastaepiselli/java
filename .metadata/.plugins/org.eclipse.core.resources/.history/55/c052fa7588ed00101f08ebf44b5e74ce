@@ -1,0 +1,44 @@
+package bankAccount;
+
+import java.time.LocalDate;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		// la banca ha un nome e un capitale iniziale
+		Bank fineco = new Bank("Fineco", 200.000);
+		
+		// test bankAccount
+		BankAccount luca = new BankAccount("Luca");
+		BankAccount pier = new BankAccount("Pier", 250.50);
+		
+		// toString();
+		System.out.println(luca);
+		System.out.println(pier);
+		
+		// handleMovement + test classe movement
+		
+		luca.handleMovement(new Movement(Type.deposit, LocalDate.now(), 125.0));
+		pier.handleMovement(new Movement(Type.withdrawal, LocalDate.now(), 50.5));
+		
+		// controllo errore
+		// luca.handleMovement(new Movement(Type.withdrawal, LocalDate.now(), 150.0));
+		System.out.println(luca);
+		System.out.println(pier);
+		
+		luca.handleMovement(new Movement(Type.withdrawal, LocalDate.now(), 15.0));
+		luca.handleMovement(new Movement(Type.withdrawal, LocalDate.now(), 45.0));
+		luca.handleMovement(new Movement(Type.deposit, LocalDate.now(), 75.0));
+		luca.handleMovement(new Movement(Type.deposit, LocalDate.now(), 25.0));
+		luca.handleMovement(new Movement(Type.withdrawal, LocalDate.now(), 55.5));
+		
+		System.out.println(luca.checkBalance());
+		
+		
+		
+		
+
+	}
+
+}

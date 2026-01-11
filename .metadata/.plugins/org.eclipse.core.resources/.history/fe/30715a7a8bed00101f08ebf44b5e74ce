@@ -1,0 +1,47 @@
+package bankAccount;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+public class Bank {
+	private String name;
+	private double assets;
+	private ArrayList<BankAccount> accounts;
+	
+	public Bank(String name, double assets) {
+		this.name = name;
+		this.assets = assets;
+		this.accounts = new ArrayList<BankAccount>();
+	}
+	
+	public void open(BankAccount acc) {
+		this.accounts.add(acc);
+	}
+	
+	public void close(BankAccount acc) {
+		this.accounts.remove(acc);
+	}
+	
+	public void transfer(BankAccount sender, BankAccount receiver, double amount, LocalDate date) {
+		if (this.accounts.contains(receiver) && this.accounts.contains(sender)) {
+			Movement send = new Movement(Type.withdrawal, date, amount);
+			sender.handleMovement(send);
+			
+			Movement recive = new Movement(Type.deposit, date, amount);
+			receiver.handleMovement(recive);
+		} else {
+			System.out.println("The accouts need to be in the same bank");
+		}
+	}
+	
+	public double totalAssets() {
+		double total = this.assets;
+		for (BankAccount bankAccount : accounts) {
+			total += bankAccount.getBalance();
+		}
+		return total;
+	}
+	
+	
+	
+}

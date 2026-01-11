@@ -19,5 +19,11 @@
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="bankAccount.Bank"/>
+    <fullyQualifiedTypeName name="bankAccount.BankAccount"/>
+    <fullyQualifiedTypeName name="bankAccount.SavingAccount"/>
+    <fullyQualifiedTypeName name="bankAccount.Movement"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
 </qualifiedTypeNameHistroy>

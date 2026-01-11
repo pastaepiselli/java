@@ -1,5 +1,6 @@
 package bankAccount;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class BankAccount {
@@ -22,9 +23,11 @@ public class BankAccount {
 			throw new IllegalArgumentException("Initial deposit must be greater than 0");
 			}
 		this.holder = holder;
-		this.balance = initialDeposit;
+		this.balance = 0;
 		this.movements = new ArrayList<Movement>();
+		this.handleMovement(new Movement(Type.deposit, LocalDate.now(), initialDeposit));
 		this.num = counter;
+		
 		counter++;
 	}
 	
@@ -68,11 +71,7 @@ public class BankAccount {
 			}
 		}
 		
-		if (sum == this.balance) {
-			return true;
-		}
-		
-		return false;
+		return sum == this.balance;
 	}
 	
 	public void showMovementList(){

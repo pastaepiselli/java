@@ -1,0 +1,69 @@
+package bankAccount;
+
+import java.util.ArrayList;
+
+public class BankAccount {
+	static int counter;
+	private String holder;
+	private int num;
+	private double balance;
+	private ArrayList<Movement> movementList;
+
+	public BankAccount(String holder) {
+		this.holder = holder;
+		this.balance = 0;
+		this.num = counter;
+		counter++;
+	}
+
+	public BankAccount(String holder, double initialDeposit) {
+		if (initialDeposit <= 0) {
+			throw new IllegalArgumentException("Initial deposit must be greater than 0");
+			}
+		this.holder = holder;
+		this.balance = initialDeposit;
+		this.num = counter;
+		counter++;
+	}
+	
+	
+	public void handleMovement(Movement m) {
+		if (m.getType() == Type.deposit) {
+			this.balance += m.getAmount();
+		} else if (m.getType() == Type.withdrawal) {
+			if (m.getAmount() > this.balance) {
+				throw new IllegalArgumentException("You cant withdraw more than you have");
+			}
+			this.balance -= m.getAmount();
+		}
+	}
+	
+	public boolean checkBalance() {
+		int sum = 0;
+		for (Movement m : movementList) {
+			if (m.getType() == Type.deposit) {
+				sum += m.getAmount();
+			} else if (m.getType() == Type.withdrawal) {
+				sum += m.getAmount();
+			}
+		}
+		
+		if (sum == this.balance) {
+			return true;
+		}
+		
+		return false;
+	}
+	
+	public ArrayList<Movement> getMovementList(){
+		return this.movementList;
+	}
+
+	@Override
+	public String toString() {
+		return "BankAccount [holder=" + holder + ", num=" + num + ", balance=" + balance + "]";
+	}
+	
+	
+	
+}
