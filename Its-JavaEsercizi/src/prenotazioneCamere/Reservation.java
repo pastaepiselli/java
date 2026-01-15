@@ -1,0 +1,64 @@
+package prenotazioneCamere;
+
+public class Reservation implements Comparable<Reservation> {
+	private String cliente;
+	private int inizio;
+	private int fine;
+	
+	public Reservation(String cliente, int inizio, int fine) {
+		this.cliente = cliente;
+		this.setInizio(inizio);
+		this.setFine(fine);
+	}
+
+	public String getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(String cliente) {
+		this.cliente = cliente;
+	}
+
+	public int getInizio() {
+		return inizio;
+	}
+
+	public void setInizio(int inizio) {
+		if (inizio < 1 || inizio > 365) {
+			throw new IllegalArgumentException("Inserire un numero compreso tra 1 e 365");}
+		
+		this.inizio = inizio;
+	}
+
+	public int getFine() {
+		return fine;
+	}
+
+	public void setFine(int fine) {
+		if (fine < 1 || fine > 365) {
+			throw new IllegalArgumentException("Inserire un numero compreso tra 1 e 365");}
+		
+		this.fine = fine;
+	}
+
+	@Override
+	public int compareTo(Reservation arg0) {
+		if (this.getInizio() > arg0.getInizio()) {
+			return 1;
+		} else if (this.getInizio() < arg0.getInizio()) {
+			return -1;
+		} else {
+			return 0;
+		}
+	}
+
+	@Override
+	public String toString() {
+		return "Reservation [cliente=" + cliente + ", inizio=" + inizio + ", fine=" + fine + "]";
+	}
+	
+	
+	
+	
+	
+}
