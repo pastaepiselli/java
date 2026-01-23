@@ -1,0 +1,9 @@
+package traghetto;
+
+public class Tir {
+
+	public Tir() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

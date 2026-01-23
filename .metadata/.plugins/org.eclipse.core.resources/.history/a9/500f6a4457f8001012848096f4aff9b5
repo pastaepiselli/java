@@ -1,0 +1,33 @@
+package traghetto;
+
+public class Main {
+
+	public static void main(String[] args) throws IllegalAccessException {
+		// creo biglietteria
+		Biglietteria b = new Biglietteria();
+		
+		// creo veicoli / persone
+		Auto audi = new Auto("Targa1", 3, TipoAuto.Standard);
+		Persona p1 = new Persona("Marco", "PierLeoni");
+		Tir tir1= new Tir("Targa2", 2, 12.4);
+		Moto moto1 = new Moto("Targa3", 1);
+		
+		b.aggiungiInCoda(p1);
+		b.riceviPagamento();
+		
+		System.out.println(b.getCassa());
+		
+		b.aggiungiInCoda(audi);
+		
+		System.out.println(b.getCassa());
+		
+		b.riceviPagamento();
+		System.out.println(b.getCassa());
+		
+		b.aggiungiInCoda(tir1);
+	
+		
+		
+	}
+
+}

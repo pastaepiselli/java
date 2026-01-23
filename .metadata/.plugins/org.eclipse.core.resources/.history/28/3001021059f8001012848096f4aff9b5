@@ -1,0 +1,40 @@
+package traghetto;
+
+public class Main {
+
+	public static void main(String[] args) throws IllegalAccessException {
+		// creo biglietteria
+		Biglietteria b = new Biglietteria();
+		
+		// creo veicoli / persone
+		Auto audi = new Auto("Targa1", 3, TipoAuto.Standard);
+		Persona p1 = new Persona("Marco", "PierLeoni");
+		Tir tir1= new Tir("Targa2", 2, 12.4);
+		Moto moto1 = new Moto("Targa3", 1);
+		// aggiungo p1: Persona tariffa = 2.5
+		b.aggiungiInCoda(p1);
+		b.riceviPagamento();
+		
+		System.out.println(b.getCassa()); // 2.5
+		
+		// aggiungo audi con 3 persone tariffa = 2.5 * 3 + autostandard = 5 = 12.5
+		b.aggiungiInCoda(audi); 
+		
+		b.riceviPagamento();
+		System.out.println(b.getCassa()); // 15.0
+		
+		// aggiungo tir con 2 persone tariffa = 2. 2.5 + costotir(12.5) + merce trasportata (merce * 0.5) 
+	
+		b.aggiungiInCoda(tir1);
+		System.out.println(tir1.calcoloTariffa());
+		b.aggiungiInCoda(moto1);
+		
+		b.riceviPagamento();
+		
+		System.out.println(b.getCassa());
+	
+		
+		
+	}
+
+}

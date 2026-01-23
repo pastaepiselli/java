@@ -9,7 +9,6 @@
     <fullyQualifiedTypeName name="oggetti.Tamagotchi"/>
     <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
     <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
-    <fullyQualifiedTypeName name="sun.jvm.hotspot.gc.parallel.PSYoungGen"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="geometria.Rettangolo"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
@@ -23,17 +22,22 @@
     <fullyQualifiedTypeName name="bankAccount.Movement"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="sun.nio.cs.ext.MacCyrillic"/>
-    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
     <fullyQualifiedTypeName name="java.lang.IllegalAccessError"/>
     <fullyQualifiedTypeName name="prenotazioneCamere.Reservation"/>
-    <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="ecommerce.Prodotto"/>
     <fullyQualifiedTypeName name="ecommerce.Product"/>
     <fullyQualifiedTypeName name="ecommerce.ProductSale"/>
     <fullyQualifiedTypeName name="com.sun.org.apache.xpath.internal.operations.Equals"/>
     <fullyQualifiedTypeName name="textAdventure.GameLoop"/>
     <fullyQualifiedTypeName name="interfacce.Terrestre"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="azienda.Impiegato"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="azienda.ComparatorImpSalario"/>
+    <fullyQualifiedTypeName name="sun.jvm.hotspot.gc.parallel.PSYoungGen"/>
+    <fullyQualifiedTypeName name="azienda.ComparatorImpAnno"/>
+    <fullyQualifiedTypeName name="traghetto.TipoAuto"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="java.lang.IllegalAccessException"/>
+    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
 </qualifiedTypeNameHistroy>

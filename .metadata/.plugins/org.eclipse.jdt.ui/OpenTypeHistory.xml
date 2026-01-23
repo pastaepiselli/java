@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-    <typeInfo handle="=Its-JavaEsercizi/src&lt;azienda{Impiegato.java[Impiegato" modifiers="1" timestamp="1765904485435"/>
+    <typeInfo handle="=Its-JavaEsercizi/src&lt;azienda{Impiegato.java[Impiegato" modifiers="1" timestamp="1769165407884"/>
     <typeInfo handle="=Its-JavaEsercizi/src&lt;cartoleria{Cliente.java[Cliente" modifiers="1025" timestamp="1767783504762"/>
     <typeInfo handle="=Its-JavaEsercizi/src&lt;cartoleria{Articolo.java[Articolo" modifiers="1025" timestamp="1767784284867"/>
     <typeInfo handle="=Its-JavaEsercizi/src&lt;interfacce{Animale.java[Animale" modifiers="513" timestamp="1768911770344"/>
     <typeInfo handle="=Its-JavaEsercizi/src&lt;interfacce{Volatile.java[Volatile" modifiers="1025" timestamp="1768912037546"/>
+    <typeInfo handle="=Its-JavaEsercizi/\/usr\/lib\/jvm\/java-25-openjdk\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/25\/docs\/api\/=/=/module=/true=/&lt;java.util(Comparator.class[Comparator" modifiers="1537" timestamp="1761151892000"/>
+    <typeInfo handle="=Its-JavaEsercizi/src&lt;traghetto{Veicolo.java[Veicolo" modifiers="1025" timestamp="1769168922885"/>
 </typeInfoHistroy>

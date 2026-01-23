@@ -1,0 +1,34 @@
+package traghetto;
+
+import java.util.ArrayList;
+
+public class Biglietteria {
+	
+	private ArrayList<Tariffabile> coda = new ArrayList<Tariffabile>();
+	private double cassa;
+	
+	public ArrayList<Tariffabile> getCoda() {
+		return coda;
+	}
+	public double getCassa() {
+		return cassa;
+	}
+	
+	public void aggiungiInCoda(Tariffabile t) {
+		coda.add(t);
+	}
+	
+	public void riceviPagamento() {
+		if (coda.size() == 0) {
+			throw new IllegalArgumentException("Lista vuota");
+		}
+		
+		for (Tariffabile t : coda) {
+			this.cassa += t.calcoloTariffa();
+		}
+		
+		coda.clear();
+		
+		
+	}
+}

@@ -1,0 +1,44 @@
+package traghetto;
+
+public class Auto extends Veicolo {
+	private final int max_pers = 5;
+	public Auto(String targa, int num_pers, TipoAuto tipo) throws IllegalAccessException {
+		super(targa, num_pers);
+		this.tipo = tipo;
+	}
+	
+	public int getMax_pers() {
+		return max_pers;
+	}
+
+	@Override
+	public double calcoloTariffa() {
+		double t_auto = 0;
+		switch(this.getTipo()) {
+		case TipoAuto.Mini:
+			t_auto = 4;
+			break;
+		
+		case TipoAuto.Standard:
+			t_auto = 5;
+			break;
+		
+		case TipoAuto.Suv:
+			t_auto = 8.5;
+			break;
+		}
+		
+		return t_auto + (this.getNum_pers() * 2.5);
+	}
+	
+	
+	@Override
+	public void setNumPers(int num_pers) throws IllegalAccessException {
+		if (num_pers > this.getMax_pers()) {
+			throw new IllegalArgumentException("Numero massimo persone in auto 5!");
+		}
+		
+		super.setNumPers(num_pers);
+	}
+
+}

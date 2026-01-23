@@ -2,7 +2,7 @@ package azienda;
 
 import java.util.Date;
 
-public class Impiegato {
+public class Impiegato implements Comparable<Impiegato> {
 
 	private final String nome;
 	private double salario;
@@ -53,6 +53,14 @@ public class Impiegato {
 	public String toString() {
 		return String.format("Dipendente Nome=%s, Salario=%s, DataAssunzione=%s", nome, salario, dataAssunzione);
 	}
+
+	@Override
+	public int compareTo(Impiegato p) {
+		return this.getNome().compareTo(p.getNome());
+				
+	}
+	
+	
 	
 	
 	

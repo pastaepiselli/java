@@ -1,0 +1,17 @@
+package traghetto;
+
+public class Main {
+
+	public static void main(String[] args) throws IllegalAccessException {
+		Biglietteria b = new Biglietteria();
+		
+		Auto audi = new Auto("Targa1", 3, TipoAuto.Standard);
+		Persona p1 = new Persona("Marco", "PierLeoni");
+		
+		b.aggiungiInCoda(p1);
+		b.riceviPagamento();
+		
+		
+	}
+
+}

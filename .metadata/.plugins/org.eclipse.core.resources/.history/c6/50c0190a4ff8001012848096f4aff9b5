@@ -1,0 +1,9 @@
+package traghetto;
+
+public class TipoAuto {
+
+	public TipoAuto() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

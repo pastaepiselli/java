@@ -1,0 +1,27 @@
+package azienda;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Collections;
+
+public class EsempioComparable {
+	public static void main(String[] args) {
+		ArrayList<Impiegato> lista = new ArrayList<>();
+		
+		lista.add(new Impiegato("mario", 1500, new Date()));
+		lista.add(new Impiegato("anna", 1600, new Date()));
+		lista.add(new Impiegato("giulia", 1400, new Date()));
+		
+		Collections.sort(lista);
+		
+		for (Impiegato impiegato : lista) {
+			System.out.println(impiegato);
+		}
+		
+		
+		// ora voglio ordinare per salario
+		Collections.sort(lista,new ComparatorImpSalario());
+		
+		System.out.println(lista);
+	}
+}

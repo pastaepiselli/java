@@ -1,0 +1,34 @@
+package traghetto;
+
+public abstract class Veicolo implements Tariffabile {
+	private String targa;
+	private int num_pers;
+	private TipoAuto tipo;
+	
+	public Veicolo(String targa, int num_pers, TipoAuto tipo){
+		this.targa = targa;
+		this.tipo = tipo;
+		this.setNumPers(num_pers);
+		
+	}
+
+	public String getTarga() {
+		return targa;
+	}
+
+	public int getNum_pers() {
+		return num_pers;
+	}
+
+	public TipoAuto getTipo() {
+		return tipo;
+	}
+	
+	private void setNumPers(int num_pers) throws IllegalAccessException {
+		if (num_pers <= 0 ) {
+			throw new IllegalAccessException("num_pers non puo essere < 0");
+		}
+		this.num_pers = num_pers;
+	}
+	
+}

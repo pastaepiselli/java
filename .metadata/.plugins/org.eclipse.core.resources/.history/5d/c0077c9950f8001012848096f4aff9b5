@@ -1,0 +1,15 @@
+package traghetto;
+
+public class Auto extends Veicolo {
+	private final int max_pers = 5;
+	public Auto(String targa, int num_pers, TipoAuto tipo) throws IllegalAccessException {
+		super(targa, num_pers, tipo);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public double calcoloTariffa() {
+		double t_auto = ;
+	}
+
+}

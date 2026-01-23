@@ -1,0 +1,16 @@
+package traghetto;
+
+public class Auto extends Veicolo {
+
+	public Auto(String targa, int num_pers) {
+		super(targa, num_pers);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public double calcoloTariffa() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

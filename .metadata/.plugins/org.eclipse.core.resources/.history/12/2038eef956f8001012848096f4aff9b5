@@ -1,0 +1,33 @@
+package traghetto;
+
+public class Tir extends Veicolo {
+	private final int max_pers = 3;
+	private double tonnellate_merce;
+	public Tir(String targa, int num_pers, TipoAuto tipo, double tonnellate_merce) throws IllegalAccessException {
+		super(targa, num_pers, tipo);
+		this.tonnellate_merce = tonnellate_merce;
+	}
+
+	public int getMax_pers() {
+		return max_pers;
+	}
+
+	public double getTonnellate_merce() {
+		return tonnellate_merce;
+	}
+
+	@Override
+	public double calcoloTariffa() {
+		return 12.5 + (this.getNum_pers() * 2.5) + ((int) this.getTonnellate_merce() * 0.5);
+	}
+	
+	@Override
+	public void setNumPers(int num_pers) throws IllegalAccessException {
+		if (num_pers > this.getMax_pers()) {
+			throw new IllegalArgumentException("Numero persone masssimo per tir 3");
+		}
+		
+		super.setNumPers(num_pers);
+	}
+
+}
