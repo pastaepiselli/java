@@ -1,0 +1,288 @@
+package textAdventure;
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class GameLoop {
+    
+    private Random random = new Random();
+    private Popa popa;
+    
+    public GameLoop() {
+        this.popa = new Popa(100);
+    }
+    
+    // Prints text one character at a time
+    public static void printText(String text) throws InterruptedException {
+        System.out.println();
+        for (char c : text.toCharArray()) {
+            System.out.print(c);
+            Thread.sleep(50);
+        }
+    }
+    
+    // Prints italic "popa style" text one char at a time
+    public void popaText(String text) {
+        System.out.println();
+        for (char c : text.toCharArray()) {
+            System.out.printf("\033[3m%s\033[0m", c);
+            try {
+                Thread.sleep(80);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                return;
+            }
+        }
+    }
+    
+    public static void printPickUp(String text) {
+        System.out.println();
+        for (char c : text.toCharArray()) {
+            System.err.print(c);
+            try {
+                Thread.sleep(80);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                return;
+            }
+        }
+    }
+    
+    public void printStats() throws InterruptedException {
+        System.out.println("\n=== STATISTICHE ===");
+        printText("HP: " + popa.getHp() + "/" + popa.getHpMax());
+        printText("Arma: " + (popa.getArma() == null ? "Pugni" : popa.getArma().getNome()));
+        printText("Hashish: " + popa.getHashish() + "g");
+        printText("Inventario (" + popa.getInventario().size() + " oggetti):");
+        
+        for (Oggetto obj : popa.getInventario()) {
+            printText("  - " + obj.getNome());
+        }
+        System.out.println("==================\n");
+    }
+    
+    // Sistema di combattimento migliorato
+    public boolean combat(Nemico nemico) throws InterruptedException {
+        Scanner sc = new Scanner(System.in);
+        
+        printText("=== COMBATTIMENTO INIZIATO ===");
+        printText("Nemico: " + nemico.getNome());
+        printText("HP Nemico: " + nemico.getHp());
+        
+        while (popa.getHp() > 0 && nemico.getHp() > 0) {
+            System.out.println();
+            printText("--- Turno di Popa ---");
+            printText("HP: " + popa.getHp() + "/" + popa.getHpMax() + " | HP Nemico: " + nemico.getHp());
+            printText("Cosa fai?");
+            printText("1 - Attacca");
+            printText("2 - Difendi");
+            printText("3 - Fuma hashish (recupera 20 HP) [" + popa.getHashish() + "g disponibili]");
+            System.out.print("Scelta: ");
+            
+            int scelta = sc.nextInt();
+            
+            if (scelta == 1) {
+                int danno = calcolaDanno();
+                boolean morto = nemico.takeDamage(danno);
+                printText("Popa attacca con " + (popa.getArma() == null ? "i pugni" : popa.getArma().getNome()) + " e infligge " + danno + " danni!");
+                
+                if (morto) {
+                    printText(nemico.getNome() + " è stato sconfitto!");
+                    printText("=== VITTORIA ===");
+                    return true;
+                }
+            } else if (scelta == 2) {
+                printText("Popa si mette in guardia!");
+                int dannoRidotto = nemico.getDanno() / 2;
+                printText(nemico.getNome() + " attacca ma Popa difende! Subisce solo " + dannoRidotto + " danni.");
+                popa.takeDamage(dannoRidotto);
+                continue;
+            } else if (scelta == 3) {
+                if (popa.usaHashish(0.5)) {
+                    printText("Popa fuma un po' di hashish e recupera 20 HP!");
+                    printText("HP attuale: " + popa.getHp() + "/" + popa.getHpMax());
+                } else {
+                    printText("Non hai abbastanza hashish!");
+                    continue;
+                }
+            }
+            
+            // Turno nemico
+            if (nemico.getHp() > 0) {
+                printText("--- Turno di " + nemico.getNome() + " ---");
+                Thread.sleep(1000);
+                
+                int dannoNemico = nemico.getDanno() + random.nextInt(5);
+                boolean popamorto = popa.takeDamage(dannoNemico);
+                printText(nemico.getNome() + " attacca e infligge " + dannoNemico + " danni!");
+                
+                if (popamorto) {
+                    printText("Popa è stato sconfitto...");
+                    printText("=== GAME OVER ===");
+                    return false;
+                }
+            }
+        }
+        
+        return true;
+    }
+    
+    private int calcolaDanno() {
+        if (popa.getArma() == null) {
+            return 10 + random.nextInt(5); // Pugni: 10-14 danno
+        }
+        
+        int min = popa.getArma().getDannoMin();
+        int max = popa.getArma().getDannoMax();
+        return min + random.nextInt(max - min + 1);
+    }
+    
+    public void startGame() throws InterruptedException {
+        Scanner sc = new Scanner(System.in);
+        
+        printText("Bep... Bep... Bep... Bep...");
+        printText("Popa si risveglia nell'ospedale.");
+        printText("La sua vista si spanna, ha un'emicrania molto forte.");
+        
+        popaText("Cosa ci faccio qui? Ieri sera ero andato a San Lollo con i miei amici...");
+        
+        printText("Ancora confuso si guarda attorno, la stanza è vuota. Ora si accorgerà che...");
+        
+        popaText("AAAAAAAAAA CHE COSA È SUCCESSO AL BRACCIO!!!!");
+        
+        printText("Popa si è risvegliato con un braccio robotico.");
+        printText("Non sembra funzionare ma è fichissimo (e Popa è già molto bello di suo).");
+        
+        popaText("Ok devo capire che cazzo sta succedendo.");
+        
+        System.out.println();
+        printText("--------------------------------");
+        System.out.println();
+        
+        printText("Cosa fai?");
+        printText("- 1 ti alzi dal letto per cercare risposte.");
+        printText("- 2 rimani a letto aspettando un infermiere.");
+        System.out.print("Scelta: ");
+        
+        int choice = sc.nextInt();
+        
+        if (choice == 1) {
+            printText("Ancora stordito Popa si alza dal letto e qui inizia la sua avventura...");
+        } else {
+            printText("Popa ha scelto di rimanere a letto. Prende il telefono, ma si rende conto che con un braccio robotico non puo giocare a BrawlStars, graffierebbe lo schermo del telefono.");
+            printText("Quindi, ancora stordito, Popa si alza dal letto e qui inizia la sua avventura...");
+        }
+        
+        System.out.println();
+        System.out.println("-------------------");
+        printText("Fine capitolo 1");
+        System.out.println();
+    }
+    
+    public void capitolo2() throws InterruptedException {
+        Scanner sc = new Scanner(System.in);
+        
+        printText("Popa prende i suoi averi dal comodino");
+        
+        // Aggiungi oggetti all'inventario
+        popa.aggiungiHashish(1.5);
+        popa.aggiungiOggetto(new Oggetto("Winston Blue", "Sigarette di marca"));
+        popa.equipArma(new Arma("Coltello a farfalla", 15, 25));
+        
+        printPickUp("+1.5g hashish.");
+        printPickUp("+1 Winston Blue.");
+        printPickUp("+1 Coltello a farfalla.");
+        
+        
+        popaText("Questo può tornarmi utile.");
+        
+        printStats();
+        
+        printText("Popa esce dalla stanza, il corridoio è deserto.");
+        printText("In fondo al corridoio c'è un ascensore");
+        printText("Le altre stanze sembrano vuote.");
+        
+        printText("Cosa scegli?");
+        printText("- 1 Dirigiti verso l'ascensore");
+        printText("- 2 Esplora le altre stanze");
+        
+        System.out.println();
+        
+        int choice = sc.nextInt();
+        
+        if (choice == 1) {
+            printText("Lentamente Popa si dirige verso l'ascensore");
+            printText("Per chiamare l'ascensore è necessaria una tessera");
+            popaText("Dovrò esplorare questo posto...");
+        }
+        
+        printText("Prima di entrare nelle stanze Popa si avvicina alla reception");
+        printText("Sulla scrivania ci sono cartelle sparse, di tutti i pazienti");
+        printText("Leggere cartella?");
+        printText("- 1 Si");
+        printText("- 2 No");
+        
+        System.out.println();
+        
+        int leggere = sc.nextInt();
+        
+        if (leggere == 1) {
+            printText("Popa apre una cartella a caso...");
+            printText("'Paziente 247 - Esperimento braccio bionico - FALLITO'");
+            popaText("Che cazzo... esperimenti? Ma che posto è questo?");
+            printText("Improvvisamente sente dei passi che si avvicinano!");
+        }
+        
+        printText("Una guardia di sicurezza armata appare in fondo al corridoio!");
+        printText("GUARDIA: Ehi tu! I pazienti non possono uscire dalle stanze!");
+        popaText("Merda...");
+        
+        printText("La guardia si avvicina minacciosamente!");
+        printText("COMBATTIMENTO INEVITABILE!");
+        
+        Nemico guardia = new Nemico("Guardia di Sicurezza", 50, 12);
+        boolean vittoria = combat(guardia);
+        
+        if (vittoria) {
+            printText("Popa ha sconfitto la guardia!");
+            popa.aggiungiOggetto(new Oggetto("Tessera magnetica", "Apre l'ascensore"));
+            popa.equipArma(new Arma("Pistola", 20, 35));
+            
+            printPickUp("+1 Tessera magnetica");
+            printPickUp("+1 Pistola (arma equipaggiata)");
+            
+            printStats();
+            
+            popaText("Ora posso usare l'ascensore... ma prima voglio esplorare un po'.");
+            
+            printText("Popa entra nella stanza 204");
+            printText("All'interno trova un altro paziente legato al letto");
+            printText("PAZIENTE: Aiuto! Scappa da qui! Fanno esperimenti sulle persone!");
+            
+            printText("Cosa fai?");
+            printText("1 - Libera il paziente");
+            printText("2 - Ignora e vai all'ascensore");
+            
+            System.out.println();
+            
+            int scelta = sc.nextInt();
+            
+            if (scelta == 1) {
+                printText("Popa libera il paziente");
+                printText("PAZIENTE: Grazie! Ascolta, ho visto che il braccio robotico può attivarsi!");
+                printText("PAZIENTE: Devi trovare il laboratorio al piano -2. Lì c'è il dispositivo di attivazione!");
+                popa.aggiungiOggetto(new Oggetto("Nota: Laboratorio piano -2", "Info importante"));
+            }
+            
+            printText("\n=== FINE CAPITOLO 2 ===");
+            printText("Popa si dirige verso l'ascensore, pronto per scoprire la verità...");
+        }
+    }
+    
+    public static void main(String[] args) throws InterruptedException {
+        GameLoop game = new GameLoop();
+   
+        game.startGame();
+        game.capitolo2();
+    }
+} 

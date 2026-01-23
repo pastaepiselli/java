@@ -26,9 +26,9 @@ public class Room {
 	
 	public Reservation reserve(String nome, int inizio, int fine) {
 		for (Reservation r : reservation) {
-			if (inizio >= r.getInizio() && inizio <= r.getFine()) {
+			if (inizio > r.getInizio() && inizio < r.getFine()) {
 				throw new IllegalAccessError("Camera gia prenotata");
-			} else if (fine >= r.getInizio() && fine <= r.getFine()) {
+			} else if (fine > r.getInizio() && fine < r.getFine()) {
 				throw new IllegalAccessError("Camera gia prenotata");
 			}
 		}

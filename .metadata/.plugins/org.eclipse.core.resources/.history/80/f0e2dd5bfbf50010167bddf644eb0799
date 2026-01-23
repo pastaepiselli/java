@@ -1,0 +1,17 @@
+package interfacce;
+
+public class Volatile implements Animale {
+
+	@Override
+	public String verso() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String categoria() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

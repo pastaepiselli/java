@@ -1,0 +1,15 @@
+package interfacce;
+
+public abstract class Terrestre implements Animale {
+	private String categoria;
+	
+	@Override
+	public String categoria() {
+		return categoria;
+	}
+	
+	@Override
+	public String toString() {
+		return "Categoria: " + categoria;
+	}
+}

@@ -1,0 +1,12 @@
+package textAdventure;
+
+public class Item {
+	private String nome;
+	private String descrizione;
+	public Item(String nome, String descrizione) {
+		this.nome = nome;
+		this.descrizione = descrizione;
+	}
+	
+	
+}

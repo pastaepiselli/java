@@ -2,14 +2,18 @@ package prenotazioneCamere;
 
 public class Main {
 	public static void main (String[] args) {
-		Room r1 = new Room(150);
+		Room r = new Room(103);
 		
-		r1.reserve("lorenze", 50, 61);
+		Reservation p1 = r.reserve("mario rossi", 105, 120);
+		Reservation p2 = r.reserve("anna bianchi", 5, 20);
+		Reservation p3 = r.reserve("pietro neri", 20, 22);
+		Reservation p4 = r.reserve("gianna galli", 200, 222);
 		
-		r1.reserve("colle", 9, 12);
+		for (Reservation p : r.reservations()) {
+			System.out.println(p.getCliente());
+		}
 		
-		r1.reserve("luca", 20, 30);
-		
-		System.out.println(r1.reservations());
+		// questo da errore
+		// Reservation p5 = r.reserve("tony blu", 21, 23);
 	}
 }

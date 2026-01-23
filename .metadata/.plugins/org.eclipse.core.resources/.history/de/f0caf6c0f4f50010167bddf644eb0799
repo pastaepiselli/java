@@ -1,0 +1,81 @@
+package textAdventure;
+
+import java.util.ArrayList;
+
+public class Popa {
+	private int hp;
+	private int hpMax;
+	private ArrayList<Oggetto> inventario = new ArrayList<Oggetto>();
+	private Arma arma;
+	private double hashish;
+	private boolean braccioattivato;
+	
+	public Popa(int hpMax) {
+		this.hp = hpMax;
+		this.hpMax = hpMax;
+		this.braccioattivato = false;
+	
+	}
+
+	public int getHp() {
+		return hp;
+	}
+
+	public Arma getArma() {
+		return arma;
+	}
+
+	public void equipArma(Arma arma) {
+		this.arma = arma;
+	}
+
+	public int getHpMax() {
+		return hpMax;
+	}
+
+	public ArrayList<Oggetto> getInventario() {
+		return inventario;
+	}
+
+	public double getHashish() {
+		return hashish;
+	}
+	
+	public void aggiungiOggetto(Oggetto oggetto) {
+        inventario.add(oggetto);
+    }
+    
+    public void aggiungiHashish(double quantita) {
+        this.hashish += quantita;
+    }
+    
+    public boolean takeDamage(int damage) {
+        this.hp -= damage;
+        if (this.hp <= 0) {
+            this.hp = 0;
+            return true; // morto :(
+        }
+        return false;
+    }
+    
+    public void heal(int amount) {
+        this.hp += amount;
+        if (this.hp > hpMax) {
+            this.hp = hpMax;
+        }
+    }
+    
+    public boolean usaHashish(double quantita) {
+        if (this.hashish >= quantita) {
+            this.hashish -= quantita;
+            heal(20);
+            return true;
+        }
+        return false;
+    }
+
+	
+	
+	
+	
+}

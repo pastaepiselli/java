@@ -1,0 +1,31 @@
+package interfacce;
+
+import java.util.ArrayList;
+
+public class Arca {
+	ArrayList<Animale> animali = new ArrayList<Animale>();
+	
+	public void salva(Animale a) {
+		animali.add(a);
+	}
+	
+	public int getNumeroAnimali() {
+		return animali.size();
+	}
+	
+	public String coro() {
+		String coro = "";
+		for (Animale animale : animali) {
+			coro += animale.verso();
+		}
+		return coro;
+	}
+	
+	public String toString() {
+		String toStringanimali = "";
+		for (Animale animale : animali) {
+			toStringanimali += animale.toString();
+		}
+		return toStringanimali;
+	}
+}

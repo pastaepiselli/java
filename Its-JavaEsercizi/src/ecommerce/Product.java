@@ -1,5 +1,9 @@
 package ecommerce;
 
+import java.util.Objects;
+
+
+
 public class Product {
 	private int id;
 	private String description;
@@ -44,12 +48,44 @@ public class Product {
 	public double getTotal() {
 		return this.getQuantity() * this.getPrice();
 	}
+	
+	public void increment(int amount) {
+		this.quantity += amount;
+	}
+	
+	public boolean decrement(int amount) {
+		if (this.quantity - amount <= 0) {
+			return false;
+		}
+		
+		this.quantity -= amount;
+		return true;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		// fa il caste per poterci chiamare .id
+		Product other = (Product) obj;
+		return id == other.id;
+	}
 
 	@Override
 	public String toString() {
 		return "Prodotto [id=" + id + ", description=" + description + ", quantity=" + quantity + ", price=" + price
 				+ "]";
 	}
+	
 	
 	
 	

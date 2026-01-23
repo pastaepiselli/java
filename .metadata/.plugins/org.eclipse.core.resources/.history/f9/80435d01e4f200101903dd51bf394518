@@ -1,0 +1,17 @@
+package prenotazioneCamere;
+
+public class Main {
+	public static void main (String[] args) {
+		Room r = new Room(103);
+		
+		Reservation p1 = r.reserve("mario rossi", 105, 120);
+		Reservation p2 = r.reserve("anna bianchi", 5, 20);
+		
+		
+		
+		for (Reservation p : r.reservations()) {
+			System.out.println(p.getCliente());
+		}
+		
+	}
+}

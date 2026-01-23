@@ -1,0 +1,36 @@
+package textAdventure;
+
+public class Nemico {
+	private String nome;
+	private int hp;
+	private int danno;
+	
+	public Nemico(String nome, int hp, int danno) {
+		super();
+		this.nome = nome;
+		this.hp = hp;
+		this.danno = danno;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public int getHp() {
+		return hp;
+	}
+
+	public int getDanno() {
+		return danno;
+	}
+	
+	public boolean takeDamage(int damage){
+		this.hp -= damage;
+		if (this.hp <= 0) {
+			return true;
+		}
+		
+		return false;
+	}
+	
+}

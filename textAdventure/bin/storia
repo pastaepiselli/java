@@ -15,22 +15,31 @@ Storia:
 	
 	Rimani o esci?
 	
-	- Rimani: Gioco finisce...
+	- Rimani: forzato a continuare
 	- Esci: continua
 	
 	- Popa esce dalla stanza, ma prima prende un oggetto, l'ospedale sembra deserto, non ci sono infermiere/i che girano per i corridoi, la reception e vuota, in fondo al corridoio 
 	ce un ascensore (la luce e accesa), un cartello sul muro indica il 2 piano, ancora confuso dal brusco risveglio decide di:
 	
-	Prendi Scale o ascensore:
 	
-	- Prendi Scale:
-		boh
+	ascensore necessario badge
 	
-	- Ascensore:
-		- ci sono 5 bottoni:
-			- 4 
-			- 3 
-			- 2 (piano attuale)
-			- 1 
-			- -1 (necessario badge)
+	primo fight con guardia di sicurezza
+	
+	dopo la vittoria droppa keycard per ascensore
+	
+	continuare ad esploare?
+	
+	1 Scopri un paziente che puoi aiutare (indizio per usare braccio), piano -2 per attivare il braccio 
+	
+	2 subito scendi da ascensore 
+	
+	
+	
+	ascensore disoponibili 4 piani:
+		- 2 (attuale)
+		- 1 (sempre un corridoio con pazienti, possibile loot + nemici)
+		- Terra (main hall) pieno di nemici, dove e presente anche il boss finale medico supermutato di torvaianica
+		- -1 laboratorio 1 (necessario passare qua per scendere -2), zona di loot e nemici 
+		- -2 laboratorio 2 (per attivare il braccio), attivatore braccio si sbloccano abilita braccio robotico
 		

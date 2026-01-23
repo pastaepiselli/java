@@ -8,7 +8,7 @@ public class Carrello {
 	public void addProduct(Product p) {
 		int t = this.products.indexOf(p);
 		if (t != -1) {
-			this.products.get(t).setQuantity(this.products.get(t).getQuantity() + p.getQuantity());
+			this.products.get(t).increment(p.getQuantity());
 		} else {
 			this.products.add(p);
 		}
@@ -17,8 +17,7 @@ public class Carrello {
 	public void removeProduct(Product p) {
 		int t = this.products.indexOf(p);
 		if(t != -1) {
-			if (this.products.get(t).getQuantity() - p.getQuantity() > 1) {
-				this.products.get(t).setQuantity(this.products.get(t).getQuantity() - p.getQuantity());
+			if (this.products.get(t).decrement(p.getQuantity())) {
 			} else {
 				this.products.remove(t);
 			}

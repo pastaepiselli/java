@@ -1,0 +1,10 @@
+package ecommerce;
+
+public class ProducSale extends Prodotto {
+
+	public ProducSale(int id, String description, int quantity, int price) {
+		super(id, description, quantity, price);
+		// TODO Auto-generated constructor stub
+	}
+
+}

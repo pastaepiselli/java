@@ -1,0 +1,11 @@
+package prenotazioneCamere;
+
+public class Main {
+	public static void main (String[] args) {
+		Room r1 = new Room(150);
+		
+		r1.reserve("lorenze", 1, 6);
+		
+		r1.reserve("colle", 3, 12);
+	}
+}
