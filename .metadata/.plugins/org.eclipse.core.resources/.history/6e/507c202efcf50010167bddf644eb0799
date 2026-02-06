@@ -1,5 +1,0 @@
-package interfacce;
-
-public class Cane extends Terrestre, Volatile {
-	
-}

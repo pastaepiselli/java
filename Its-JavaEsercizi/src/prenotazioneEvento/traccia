@@ -1,0 +1,37 @@
+Si vuole sviluppare un’applicazione per la prenotazione di posti a un evento
+Ogni evento ha:
+Un nome
+Una data
+Una lista di prenotazioni
+La prenotazione invece è composta da 
+una lista di posti 
+un indirizzo email (che identifica l’acquirente)
+Il posto è identificato da 
+una lettera (per la corsia )
+un numero intero (il posto)
+(es. B12) 
+
+Creare la classe GestorePrenotazioni che possiede la location fissata con una lista statica di posti e un elenco di eventi che si tengono nella location.
+Il gestore può 
+creare un evento nuovo, specificando nome e data.
+aggiungere una prenotazione ad un evento, specificando data, numero posti e email
+semplificazione: non è richiesto che i posti siano vicini
+annullare la prenotazione per un evento relativa ad un email
+chiudere un evento
+impedire che si possano aggiungere/eliminare prenotazioni
+
+Per ciascun servizio aggiungere le eccezioni personalizzate che modellino le anomalie 
+creare un evento nuovo
+Errore se la data è già occupata da un altro evento
+aggiungere una prenotazione ad un evento, specificando data evento, numero posti e email
+Errore l’evento non esiste 
+Errore se il numero di posti è negativo o nullo
+Errore se l’email è vuota oppure se è già esistente
+Errore se non sono disponibili tutti i posti richiesti
+Errore se l’evento è chiuso
+annullare la prenotazione per un evento, indicando l’email di prenotazione
+Errore se l’evento non esiste
+Errore se l’evento è chiuso
+Errore se l’email è vuota oppure non esiste (cioè non c’è la prenotazione da annullare)
+chiudere un evento
+Errore l’evento non esiste 

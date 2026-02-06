@@ -1,6 +1,7 @@
 package azienda;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class Impiegato implements Comparable<Impiegato> {
 
@@ -59,7 +60,24 @@ public class Impiegato implements Comparable<Impiegato> {
 		return this.getNome().compareTo(p.getNome());
 				
 	}
-	
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(dataAssunzione, nome, salario);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Impiegato other = (Impiegato) obj;
+		return Objects.equals(dataAssunzione, other.dataAssunzione) && Objects.equals(nome, other.nome)
+				&& Double.doubleToLongBits(salario) == Double.doubleToLongBits(other.salario);
+	}
 	
 	
 	

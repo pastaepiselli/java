@@ -430,6 +430,7 @@ public class GameLoop {
 	}	
 	public static void main(String[] args) throws Throwable {
 		GameLoop game = new GameLoop();
+		game.capitolo1();
 		game.capitolo2();
 	}
 }

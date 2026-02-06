@@ -1,9 +1,0 @@
-package traghetto;
-
-public class Biglietteria {
-
-	public Biglietteria() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

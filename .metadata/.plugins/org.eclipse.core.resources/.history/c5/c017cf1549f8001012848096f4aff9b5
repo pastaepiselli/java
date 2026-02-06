@@ -1,7 +1,0 @@
-package azienda;
-
-import java.util.Comparator;
-
-public class ComparatorImpSalario implements Comparator<T> {
-
-}

@@ -1,9 +1,0 @@
-package azienda;
-
-import java.util.ArrayList;
-
-public class EsempioComparable {
-	public static void main(String[] args) {
-		ArrayList<Impiegato> lista = new ArrayList<>()
-	}
-}

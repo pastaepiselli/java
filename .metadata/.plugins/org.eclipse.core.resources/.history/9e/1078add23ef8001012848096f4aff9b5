@@ -1,7 +1,0 @@
-package azienda;
-
-public class EsempioComparable {
-	public static void main(String[] args) {
-		
-	}
-}
