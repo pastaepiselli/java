@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="oggetti.Persona"/>
-    <fullyQualifiedTypeName name="oggetti.Tamagotchi"/>
-    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
-    <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
-    <fullyQualifiedTypeName name="geometria.Rettangolo"/>
-    <fullyQualifiedTypeName name="rubrica.Rubrica"/>
     <fullyQualifiedTypeName name="cartoleria.Gomma"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
@@ -44,7 +38,6 @@
     <fullyQualifiedTypeName name="eccezioni.CorsoJavaException"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
     <fullyQualifiedTypeName name="java.sql.Array"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="studio_medico.MedicoNonTrovato"/>
     <fullyQualifiedTypeName name="java.lang.IllegalAccessException"/>
     <fullyQualifiedTypeName name="studio_medico.Appuntamento"/>
@@ -60,4 +53,11 @@
     <fullyQualifiedTypeName name="java.lang.AssertionError"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.api.BeforeEach"/>
     <fullyQualifiedTypeName name="tamagotchi.Tamagotchi"/>
+    <fullyQualifiedTypeName name="java.awt.List"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="lambda.Criterio"/>
+    <fullyQualifiedTypeName name="lambda.CriterioColoreVerde"/>
+    <fullyQualifiedTypeName name="lambda.CriterioPeso"/>
+    <fullyQualifiedTypeName name="traffico.Automobile"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
