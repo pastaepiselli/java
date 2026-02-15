@@ -1,29 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="cartoleria.Gomma"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
-    <fullyQualifiedTypeName name="bankAccount.Bank"/>
-    <fullyQualifiedTypeName name="bankAccount.BankAccount"/>
-    <fullyQualifiedTypeName name="bankAccount.SavingAccount"/>
-    <fullyQualifiedTypeName name="bankAccount.Movement"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
-    <fullyQualifiedTypeName name="sun.nio.cs.ext.MacCyrillic"/>
-    <fullyQualifiedTypeName name="java.lang.IllegalAccessError"/>
-    <fullyQualifiedTypeName name="prenotazioneCamere.Reservation"/>
-    <fullyQualifiedTypeName name="ecommerce.Prodotto"/>
-    <fullyQualifiedTypeName name="ecommerce.Product"/>
-    <fullyQualifiedTypeName name="ecommerce.ProductSale"/>
-    <fullyQualifiedTypeName name="com.sun.org.apache.xpath.internal.operations.Equals"/>
-    <fullyQualifiedTypeName name="textAdventure.GameLoop"/>
-    <fullyQualifiedTypeName name="interfacce.Terrestre"/>
-    <fullyQualifiedTypeName name="java.util.Collections"/>
-    <fullyQualifiedTypeName name="sun.jvm.hotspot.gc.parallel.PSYoungGen"/>
-    <fullyQualifiedTypeName name="traghetto.TipoAuto"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
-    <fullyQualifiedTypeName name="creazione_pila.PilaGenericaObject"/>
-    <fullyQualifiedTypeName name="java.util.LinkedList"/>
-    <fullyQualifiedTypeName name="creazione_pila.PilaGenericaGenerics"/>
     <fullyQualifiedTypeName name="azienda.Impiegato"/>
     <fullyQualifiedTypeName name="azienda.ComparatorImpAnno"/>
     <fullyQualifiedTypeName name="azienda.ComparatorImpSalario"/>
@@ -42,7 +18,6 @@
     <fullyQualifiedTypeName name="java.lang.IllegalAccessException"/>
     <fullyQualifiedTypeName name="studio_medico.Appuntamento"/>
     <fullyQualifiedTypeName name="studio_medico.AppuntamentoInesistente"/>
-    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
     <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
     <fullyQualifiedTypeName name="studio_medico.MedicoEsistente"/>
     <fullyQualifiedTypeName name="java.util.logging.Logger"/>
@@ -60,4 +35,29 @@
     <fullyQualifiedTypeName name="lambda.CriterioPeso"/>
     <fullyQualifiedTypeName name="traffico.Automobile"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="lista_prodotti.Categoria"/>
+    <fullyQualifiedTypeName name="strategy.TipoSconto"/>
+    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+    <fullyQualifiedTypeName name="java.time.Month"/>
+    <fullyQualifiedTypeName name="strategy.ScontoBlackFriday"/>
+    <fullyQualifiedTypeName name="strategy.ScontoSaldiInvernali"/>
+    <fullyQualifiedTypeName name="strategy.ScontoSaldiEstivi"/>
+    <fullyQualifiedTypeName name="strategy.Carrello"/>
+    <fullyQualifiedTypeName name="strategy.PeriodoSconto"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="javax.swing.JFrame"/>
+    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
+    <fullyQualifiedTypeName name="javax.swing.BorderFactory"/>
+    <fullyQualifiedTypeName name="java.awt.GridBagLayout"/>
+    <fullyQualifiedTypeName name="java.awt.GridLayout"/>
+    <fullyQualifiedTypeName name="sudoku.Sudoku"/>
+    <fullyQualifiedTypeName name="javax.swing.JButton"/>
+    <fullyQualifiedTypeName name="java.awt.Button"/>
+    <fullyQualifiedTypeName name="java.awt.Color"/>
+    <fullyQualifiedTypeName name="javax.swing.JPanel"/>
+    <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+    <fullyQualifiedTypeName name="sudoku.ResetButton"/>
 </qualifiedTypeNameHistroy>
