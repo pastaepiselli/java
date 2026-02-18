@@ -8,7 +8,7 @@ public class Sudoku {
 
 
 	int boardWidth = 600;
-	int boardHeight = 650;
+	int boardHeight = 750;
 
 	String[] puzzle = {
 			"--74916-5",
@@ -21,7 +21,7 @@ public class Sudoku {
 			"67-83----",
 			"81--45---"
 	};
-
+	
 	String[] soluzione = {
 			"387491625",
 			"241568379",
@@ -33,13 +33,19 @@ public class Sudoku {
 			"675832941",
 			"812945763"
 	};
+	
+	
 
 	JFrame frame = new JFrame("Sudoku");
 	JLabel textLabel = new JLabel() ;
 	JPanel textPanel = new JPanel();
 	JPanel boardPanel = new JPanel(); // pannello in cui andra la griglia dei numeri
 	JPanel buttonsPanel = new JPanel();
+	JPanel modePanel = new JPanel();
+	JLabel difficultyText = new JLabel();
 	
+	// dove andra la difficola e i numeri 
+	JPanel southPanel = new JPanel();
 	
 	// tenere traccia del numero sotto selezionato
 	JButton numSelected = null;
@@ -56,12 +62,20 @@ public class Sudoku {
 		frame.setLayout(new BorderLayout()); // possiamo insesire ovunque dei componenti nel frame
 
 		// stile, posizione e inserimento testo
+		textPanel.setLayout(new BorderLayout());
 		textLabel.setFont(new Font("Arial", Font.BOLD, 30));
 		textLabel.setHorizontalAlignment(JLabel.CENTER);
 		textLabel.setText("Sudoku: 0");
+		
+		difficultyText.setText("Easy");
+		difficultyText.setFont(new Font("Arial", Font.BOLD, 30));
+		difficultyText.setForeground(Color.blue);
 
 		textPanel.add(textLabel); // aggiungo al frame
+		textPanel.add(difficultyText, BorderLayout.LINE_START);
+		
 		frame.add(textPanel, BorderLayout.NORTH); // inserisco e specifico posizione
+		
 
 		boardPanel.setLayout(new GridLayout(9, 9));
 		setUpTiles();
@@ -71,14 +85,29 @@ public class Sudoku {
 		
 		buttonsPanel.setLayout(new GridLayout(1, 9));
 		setUpButtons(); // inserisco i bottoni con i numeri
-		frame.add(buttonsPanel, BorderLayout.SOUTH); // inserisco in basso
+		
+		southPanel.setLayout(new BorderLayout());
+	
+		southPanel.add(buttonsPanel, BorderLayout.CENTER); // aggiungo numeri selezionabili
+		
+		// difficolta
+		
+		modePanel.add(new ModeButton("Easy", this));
+		modePanel.add(new ModeButton("Medium", this));
+		modePanel.add(new ModeButton("Hard", this));
+		southPanel.add(modePanel, BorderLayout.SOUTH);
+		
+		frame.add(southPanel, BorderLayout.SOUTH);
 		
 		// button per il reset
 		textPanel.add(new ResetButton(this), BorderLayout.EAST); // crea un ResetButton e passagli questo Sudoku.
 		
+		
 
 		// si imposta visibile appena tutto e stato inserito per evitare che a volte non carichi tutto
 		frame.setVisible(true);
+		
+		
 
 	}
 
@@ -99,7 +128,7 @@ public class Sudoku {
 					tile.setBackground(Color.LIGHT_GRAY);
 
 				} else { // tile vuota
-					tile.setFont(new Font("Arial", Font.PLAIN, 20));
+					tile.setFont(new Font("Arial", Font.BOLD, 20));
 					tile.setBackground(Color.white);
 				}
 				// controllo angoli (spessore sia basso che destra
@@ -239,6 +268,19 @@ public class Sudoku {
 		// i componenti sono cambiati
 		boardPanel.revalidate(); // riconta le dimensioni e robe
 		boardPanel.repaint(); // ridisegna tutto il pannello
+	}
+	
+	void changeMode(String[]newGridSolved, String[] newGridPuzzle, String difficulty) {
+		
+		// cambio mappa e resetto
+		puzzle = newGridPuzzle;
+		soluzione = newGridSolved;
+		
+		// cambio testo della difficolta
+		difficultyText.setText(difficulty);
+		
+		
+		resetGame();
 	}
 
 }
