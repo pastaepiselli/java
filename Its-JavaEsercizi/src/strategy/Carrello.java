@@ -27,7 +27,7 @@ public class Carrello {
 	
 	public double calcoloTotale(Sconto s) {
 		if (s == null) {
-			// nessuno sconto
+			// nessuno sconto 
 			return this.calcoloTotale();
 		}
 		return s.applica(this.calcoloTotale());

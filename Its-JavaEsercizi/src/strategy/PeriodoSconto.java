@@ -3,6 +3,7 @@ package strategy;
 import java.time.LocalDate;
 import java.time.Month;
 
+// class factory :P
 public class PeriodoSconto {
 	// static cosi che non devo istanziare per chiamare questo metodo
 	public static Sconto getSconto(LocalDate dataAcquisto) {

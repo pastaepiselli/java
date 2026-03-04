@@ -1,6 +1,6 @@
 package rubrica;
 
-public class Main {
+public  class Main  {
 
 	public static void main(String[] args) {
 		Contatto mirko = new Contatto("Mirko", "Pierlions", "3742225793");
@@ -22,6 +22,14 @@ public class Main {
 		// 
 		System.out.println(rubrica.numeroPostiLiberi());
 
+		
+		String s = "ciao";
+		String c = s;
+		
+		System.out.println(s == c);
 	}
+	
+	
 
 }
+
