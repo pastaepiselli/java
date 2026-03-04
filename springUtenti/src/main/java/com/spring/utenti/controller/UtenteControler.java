@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.spring.utenti.dto.NomeCognomeDTO;
+import com.spring.utenti.dto.UtenteDTO;
 import com.spring.utenti.entity.Utente;
 import com.spring.utenti.service.UtenteService;
 
@@ -23,32 +26,32 @@ public class UtenteControler {
     private UtenteService service = new UtenteService();
 	
 	@PostMapping(path="/registra", consumes="application/json")
-	public boolean registra(@RequestBody Utente utente) {
+	public boolean registra(@RequestBody UtenteDTO utente) {
 		return service.registra(utente);
 	}
 	
 	@GetMapping(path="/cercaPerId/{idUtente}", produces = "application/json")
-	public Utente cercaPerId(@PathVariable int idUtente) {
+	public UtenteDTO cercaPerId(@PathVariable int idUtente) {
 		return service.cercaPerId(idUtente);
 	}
 	
 	@GetMapping(path="", produces = "application/json")
-	public List<Utente> listAll(){
+	public List<UtenteDTO> listAll(){
 		return service.listAll();
 	}
 	
 	@DeleteMapping(path="/cercaPerId/{idUtente}", produces = "application/json")
-	public Utente deleteById(@PathVariable int idUtente) {
+	public UtenteDTO deleteById(@PathVariable int idUtente) {
 		return service.delete(idUtente);
 	}
 	
 	@PatchMapping(path="/modificaEmail/{idUtente}", produces = "application/json")
-	public Utente updateEmail(@PathVariable int idUtente, String newEmail) {
+	public UtenteDTO updateEmail(@PathVariable int idUtente, String newEmail) {
 		return service.updateEmail(idUtente, newEmail);
 	}
 	
 	@GetMapping(path="/ordinatiPerNome", produces = "application/json")
-	public List<Utente> ordinaPerNome(){
+	public List<UtenteDTO> ordinaPerNome(){
 		return service.sortUtentiNome();
 	}
 	
@@ -61,6 +64,11 @@ public class UtenteControler {
 	@GetMapping(path="/listaGmail", produces = "application/json")
 	public List<String> listaGmail(){
 		return service.emailConGmail();
+	}
+	
+	@GetMapping(path="/nomiCognomi", produces = "application/json")
+	public List<NomeCognomeDTO> getNomiCognomi(){
+		return service.getNomiCognomi();
 	}
 	
 	

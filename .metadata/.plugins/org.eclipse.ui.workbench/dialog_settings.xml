@@ -22,12 +22,16 @@
 		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_SIZE" value="true"/>
 		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_LOCATION" value="false"/>
 		<list key="orderedElements">
+			<item value="org.eclipse.jdt.ui.CompilationUnitEditorspringUtenti/src/main/java/com/spring/utenti/controller/UtenteControler.java"/>
 		</list>
 		<list key="orderedProviders">
+			<item value="org.eclipse.ui.editors"/>
 		</list>
 		<list key="textEntries">
+			<item value="1"/>
 		</list>
 		<list key="textArray">
+			<item value="controller"/>
 		</list>
 	</section>
 </section>
