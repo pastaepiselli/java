@@ -1,12 +1,14 @@
 package com.spring.universita.services;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import com.spring.universita.dao.StudentiDAO;
+import com.spring.universita.dto.CognomeAnnoImmatricolazioneDTO;
 import com.spring.universita.dto.CognomeAnnoNascitaDTO;
 import com.spring.universita.dto.StudenteDTO;
-import com.spring.universita.dto.cognomeAnnoNascitaDTO;
 import com.spring.universita.entity.Studente;
 import com.spring.universita.mapper.Mapper;
 
@@ -52,12 +54,24 @@ public class StudentiServices {
 				.map(s -> s.getNome())
 				.collect(Collectors.toList());
 	}
-	// TODO finisci metodo
+	
 	public CognomeAnnoNascitaDTO cognomeAnnoNascitaStudentePiuGiovane() {
 		return dao.visualizzaStudenti()
 				.stream()
 				.map(s -> new CognomeAnnoNascitaDTO(s.getCognome(), s.getAnnoNascita()))
+				.max(Comparator.comparingInt(dto -> dto.getAnnoNascita())) // studente con anno di nascita maggiore
+				.orElse(null);
+	}
+	
+	public CognomeAnnoImmatricolazioneDTO cognomeAnnoImmatricolazionePiuVecchio() {
+		return dao.visualizzaStudenti()
+				.stream()
+				.map(s -> new CognomeAnnoImmatricolazioneDTO(s.getCognome(), s.getAnnoImmatricolazione()))
+				.min(Comparator.comparingInt(dto -> dto.getAnnoImmatricolazione())) // anno imm minore
+				.orElse(null); // se la lista e vuota ritorno null
 				
 	}
+	
+	
 	
 }

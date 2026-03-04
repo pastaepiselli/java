@@ -1,6 +1,8 @@
 package com.spring.universita.mapper;
 
+import com.spring.universita.dto.ProfessoreDTO;
 import com.spring.universita.dto.StudenteDTO;
+import com.spring.universita.entity.Professore;
 import com.spring.universita.entity.Studente;
 
 public class Mapper {
@@ -15,5 +17,13 @@ public class Mapper {
 				dto.getMatricola(), dto.getIndirizzo(), dto.getAnnoNascita(), dto.getAnnoImmatricolazione());
 	}
 	
+	public static ProfessoreDTO daProfessoreAProfessoreDTO(Professore professore) {
+		return new ProfessoreDTO(professore.getNome(), professore.getCognome(), 
+				professore.getMateriaInsegnamento(), professore.getId());
+	}
+	
+	public static Professore daProfessoreDTOAProfessore(ProfessoreDTO dto) {
+		return new Professore(dto.getNome(), dto.getCognome(), dto.getMateriaInsegnamento(), dto.getId());
+	}
 }
 

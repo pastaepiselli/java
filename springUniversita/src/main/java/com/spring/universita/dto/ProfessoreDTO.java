@@ -5,8 +5,9 @@ public class ProfessoreDTO extends Persona {
 	private int id; // univoco
 	private String materiaInsegnamento;
 
-	public ProfessoreDTO(String nome, String cognome, String materiaInsegnamento) {
+	public ProfessoreDTO(String nome, String cognome, String materiaInsegnamento, int id) {
 		super(nome, cognome);
+		this.id = id;
 		this.materiaInsegnamento = materiaInsegnamento;
 	}
 

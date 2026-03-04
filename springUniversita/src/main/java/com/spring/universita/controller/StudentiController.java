@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.spring.universita.dto.CognomeAnnoImmatricolazioneDTO;
+import com.spring.universita.dto.CognomeAnnoNascitaDTO;
 import com.spring.universita.dto.StudenteDTO;
 import com.spring.universita.services.StudentiServices;
 
@@ -45,7 +47,20 @@ public class StudentiController {
 		return services.modificaIndirizzo(matricola, nuovoIndirizzo);
 	}
 	
+	@GetMapping(path="/nomiStudenti", produces = "application/json")
+	public List<String> listaNomi(){
+		return services.visualizzaElencoNomi();
+	}
 	
+	@GetMapping(path="/studentePiuGiovane", produces = "application/json")
+	public CognomeAnnoNascitaDTO getStudentePiuGiovane() {
+		return services.cognomeAnnoNascitaStudentePiuGiovane();
+	}
+	
+	@GetMapping(path="/studenteIscrittoDaPiuTempo", produces = "application/json")
+	public CognomeAnnoImmatricolazioneDTO getStudenteImmatricolazioneVecchia() {
+		return services.cognomeAnnoImmatricolazionePiuVecchio();
+	}
 	
 	
 	
