@@ -1,10 +1,13 @@
 package com.spring.magazzino.mapper;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import com.spring.magazzino.dto.ProdottoDTO;
+import com.spring.magazzino.dto.ProdottoDTONoId;
 import com.spring.magazzino.dto.ReportDTO;
 import com.spring.magazzino.entity.Prodotto;
 
@@ -27,8 +30,8 @@ public class Mapper {
 				);
 	}
 	
-	public static ProdottoDTO daProdottoDTOAProdotto(ProdottoDTO dto) {
-		return new ProdottoDTO(dto.getId(), 
+	public static Prodotto daProdottoDTOAProdotto(ProdottoDTO dto) {
+		return new Prodotto(dto.getId(), 
 				dto.getMarca(), 
 				dto.getModello(), 
 				dto.getDescrizione(), 
@@ -39,8 +42,22 @@ public class Mapper {
 				);
 	}
 	
+	// trasforma il prodotto in un prodottoDTONoId
+	public static ProdottoDTONoId daProdottoAProdottoDTONoId(Prodotto prodotto) {
+		return new ProdottoDTONoId(prodotto.getMarca(),
+				prodotto.getModello(),
+				prodotto.getDescrizione(), 
+				prodotto.getPrezzo_consigliato(), 
+				prodotto.getPrezzo_massimo(), 
+				prodotto.getQuantita(), 
+				prodotto.getCategoria());
+	}
+	
 	public static ReportDTO generaReportDaProdotti(Collection<Prodotto> prodotti) {
 		// qua creo tutti gli attributi necessari per creare il reportDTO e poi inserisco
+		if (prodotti == null || prodotti.isEmpty()) {
+			throw new RuntimeException("Nessun prodotto in magazzino su cui generare report");
+		}
 		
 		// 1) elenco con tutte le descrizioni
 		List<String> descrizioneProdotti = prodotti.stream()
@@ -77,7 +94,32 @@ public class Mapper {
 				.map(p -> p.getModello())
 				.collect(Collectors.toList());
 		
-		// TODO: Ultimo medoto e creazione della classe reportDTO
+		// 6) elenco id per ogni categoria
+		
+		Map<String, List<Integer>> idPerCategoria = prodotti.stream()
+				/*
+				 * il groupingBy invece raggruppg gli elemnti secondo una chiave
+				 * creando una map
+				 */
+				.collect(Collectors.groupingBy(
+						p ->  p.getCategoria(), // imposta la chiave
+						/*
+						 * mapping prende ogni prodotto, estraee id
+						 * e ci crear una lista
+						 */
+						Collectors.mapping(p -> p.getId(), // valore id 
+								Collectors.toList()
+								)));
+		
+		return new ReportDTO(descrizioneProdotti, 
+				totaleQuantita, 
+				numeroProdottiNonDisponibili, 
+				mediaPrezzoConsigliato, 
+				elencoModelliProdottiNonDisponibili, 
+				idPerCategoria);
+		
+		
+		
 				
 				
 				

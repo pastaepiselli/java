@@ -1,0 +1,26 @@
+1) creo le entity nella loro cartella 
+2) creo i dto delle entity e altri eventuali dto se necessari (ReportDTO), questi saranno cio 
+che verra scambiato col il server, quello che si aspetta di ricevere e quello che inviera.
+
+Si utilizza un DTO come una seconda versione dell'entity, magari di un utente conosciamo la password
+ma non vogliamo mai inviarla, potremmo inviare l'entity senza un parametro (e spring lo accetta cmq) ma e
+buona pratica creare DTO specifici per gli oggetti che scambieremo
+
+3) creo il dao, una classe con una mappa (cosa piu simile ad un tabella SQL) per simulare la persistenza dei dati
+in piu avra i metodi base rest come inserimento, ricerca (per id) e visualizzazione completa.
+
+del dao si crea prima una interfaccia e poi la classe concreta che implementa quell'interfaccia, questo per:
+
+- 1) il service accetta qualsiasi classe che implementa quell'interfaccia, cosi che il dao puo essere cambiato senza problemi
+- 2) ia mi ha detto che la maggior parte delle classi deve dipendere da astrazioni e poi lo ha detto romina di fare cosi :)
+
+4) creo il service, qui utilizzando i metodi del dao andremo ad implementare le funzionalita del web service, anche di questa classe e necessario creare un interfaccia:
+ - 1) il controller conosce il service ma solo la sua interfaccia, non sa niente dell'implementazione concreta
+ - 2) possiamo cambiare service senza modificare il controller 
+Nel service avverra la conversione DTO -> entity e viceversa, questo scaturisce subito la necessita di creare un classe di conversione, il nostro mapper.
+N.B in questo esercizio nello specifico il mapper e utilizzato anche per convertire una lista di prodotti in un reportDTO.
+
+5) creo il controller, come attributo avra un' interfaccia service e qui avvera la definizione degli endpoint, cosa fanno
+e sopratutto come lo fanno e tutto nel service.
+
+

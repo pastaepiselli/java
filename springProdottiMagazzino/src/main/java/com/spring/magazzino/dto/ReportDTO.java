@@ -2,6 +2,7 @@ package com.spring.magazzino.dto;
 
 
 import java.util.List;
+import java.util.Map;
 
 /*
  * La classe reportDTO serve solo per scambiare "statistiche"
@@ -13,14 +14,20 @@ public class ReportDTO {
 	private int totaleProdottiNonDisponibili;
 	private double mediaPrezziConsigliati;
 	private List<String> elencoModelliNonDisponibili;
+
+	
+	 // opzionale
+	private Map<String, List<Integer>> elencoIdPerCategoria;
 	public ReportDTO(List<String> elencoDescrizioni, int totalePezzi, int totaleProdottiNonDisponibili,
-			double mediaPrezziConsigliati, List<String> elencoModelliNonDisponibili) {
+			double mediaPrezziConsigliati, List<String> elencoModelliNonDisponibili, 
+			Map<String, List<Integer>> elencoIdPerCategoria) {
 		super();
 		this.elencoDescrizioni = elencoDescrizioni;
 		this.totalePezzi = totalePezzi;
 		this.totaleProdottiNonDisponibili = totaleProdottiNonDisponibili;
 		this.mediaPrezziConsigliati = mediaPrezziConsigliati;
 		this.elencoModelliNonDisponibili = elencoModelliNonDisponibili;
+		this.elencoIdPerCategoria = elencoIdPerCategoria;
 	}
 	public List<String> getElencoDescrizioni() {
 		return elencoDescrizioni;
@@ -52,6 +59,14 @@ public class ReportDTO {
 	public void setElencoModelliNonDisponibili(List<String> elencoModelliNonDisponibili) {
 		this.elencoModelliNonDisponibili = elencoModelliNonDisponibili;
 	}
+	public Map<String,List<Integer>> getElencoIdPerCategoria() {
+		return elencoIdPerCategoria;
+	}
+	public void setElencoIdPerCategoria(Map<String, List<Integer>> elencoIdPerCategoria) {
+		this.elencoIdPerCategoria = elencoIdPerCategoria;
+	}
+	
+	
 	
 	
 	
