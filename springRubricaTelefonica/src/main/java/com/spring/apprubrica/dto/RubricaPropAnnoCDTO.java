@@ -1,16 +1,15 @@
 package com.spring.apprubrica.dto;
 
-import java.time.LocalDate;
 
 public class RubricaPropAnnoCDTO {
 	private String proprietario;
-	private LocalDate annoCreazione;
+	private int annoCreazione;
 	
 	public RubricaPropAnnoCDTO() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public RubricaPropAnnoCDTO(String proprietario, LocalDate annoCreazione) {
+	public RubricaPropAnnoCDTO(String proprietario, int annoCreazione) {
 		super();
 		this.proprietario = proprietario;
 		this.annoCreazione = annoCreazione;
@@ -24,11 +23,11 @@ public class RubricaPropAnnoCDTO {
 		this.proprietario = proprietario;
 	}
 
-	public LocalDate getAnnoCreazione() {
+	public int getAnnoCreazione() {
 		return annoCreazione;
 	}
 
-	public void setAnnoCreazione(LocalDate annoCreazione) {
+	public void setAnnoCreazione(int annoCreazione) {
 		this.annoCreazione = annoCreazione;
 	}
 	

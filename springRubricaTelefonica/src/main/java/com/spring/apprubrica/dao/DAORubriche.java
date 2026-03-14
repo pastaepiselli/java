@@ -9,5 +9,6 @@ public interface DAORubriche {
 	public Rubrica cercaPerId(int id);
 	public List<Rubrica> visualizzaRubriche();
 	public void eliminaRubrica(int id);
+
 	
 }

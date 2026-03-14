@@ -1,25 +1,27 @@
 package com.spring.apprubrica.dto;
 
+import java.util.List;
+
 public class NomePropNumeroTotDTO {
-	private String nome;
+	private List<String> proprietari;
 	private int numeroTotale;
 	
 	public NomePropNumeroTotDTO() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public NomePropNumeroTotDTO(String nome, int numeroContatti) {
+	public NomePropNumeroTotDTO(List<String> proprietari, int numeroContatti) {
 		super();
-		this.nome = nome;
+		this.proprietari = proprietari;
 		this.numeroTotale = numeroContatti;
 	}
 
-	public String getNome() {
-		return nome;
+	public List<String> getProprietari() {
+		return proprietari;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setProprietari(List<String> proprietari) {
+		this.proprietari = proprietari;
 	}
 
 	public int getNumeroTotale() {

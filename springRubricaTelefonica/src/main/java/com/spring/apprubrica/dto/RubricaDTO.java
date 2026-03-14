@@ -1,6 +1,6 @@
 package com.spring.apprubrica.dto;
 
-import java.time.LocalDate;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -9,24 +9,29 @@ import com.spring.apprubrica.entity.ContattoTelefonico;
 public class RubricaDTO {
 	private int id;
 	private String proprietario; // nome
-	private LocalDate annoCreazione;
+	private int annoCreazione;
 	private Set<ContattoTelefonico> contatti = new HashSet<ContattoTelefonico>();
 	
-	// counter
-	private static int counter = 0;
+
 	
 	public RubricaDTO() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public RubricaDTO(String proprietario, LocalDate annoCreazione) {
+	public RubricaDTO( String proprietario, int annoCreazione) {
 		super();
-		this.id = counter;
 		this.proprietario = proprietario;
 		this.annoCreazione = annoCreazione;
 		
-		 // aggiorno counter
-		counter++;
+		
+	}
+	public int getId() {
+		return id;
+	}
+	
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getProprietario() {
@@ -37,11 +42,23 @@ public class RubricaDTO {
 		this.proprietario = proprietario;
 	}
 
-	public LocalDate getAnnoCreazione() {
+	public int getAnnoCreazione() {
 		return annoCreazione;
 	}
 
-	public void setAnnoCreazione(LocalDate annoCreazione) {
+	public void setAnnoCreazione(int annoCreazione) {
 		this.annoCreazione = annoCreazione;
 	}
+
+	public Set<ContattoTelefonico> getContatti() {
+		return contatti;
+	}
+
+	public void setContatti(Set<ContattoTelefonico> contatti) {
+		this.contatti = contatti;
+	}
+
+	
+	
+	
 }

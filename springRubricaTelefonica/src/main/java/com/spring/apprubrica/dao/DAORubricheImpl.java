@@ -5,10 +5,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Repository;
+
 import com.spring.apprubrica.entity.Rubrica;
 import com.spring.apprubrica.errors.IdGiaEsistente;
 import com.spring.apprubrica.errors.IdNonEsistente;
 
+
+@Repository
 public class DAORubricheImpl implements DAORubriche {
 	// dove simulo la persistenza delle rubriche
 	Map<Integer, Rubrica> mappa = new HashMap<Integer, Rubrica>();
@@ -39,8 +43,12 @@ public class DAORubricheImpl implements DAORubriche {
 			throw new IdNonEsistente("Rubrica con id: " + id + " non esistente.");
 		}
 		
-		
-
 	}
+	
+	// TODO: metodi crud per i contatti
+
+	
+	
+	
 
 }

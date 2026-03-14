@@ -8,7 +8,7 @@ import java.util.Set;
 public class Rubrica {
 	private int id;
 	private String proprietario; // nome
-	private LocalDate annoCreazione;
+	private int annoCreazione;
 	private Set<ContattoTelefonico> contatti = new HashSet<ContattoTelefonico>();
 	
 	// counter
@@ -18,7 +18,7 @@ public class Rubrica {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Rubrica(String proprietario, LocalDate annoCreazione) {
+	public Rubrica(String proprietario, int annoCreazione) {
 		super();
 		this.id = counter;
 		this.proprietario = proprietario;
@@ -41,13 +41,23 @@ public class Rubrica {
 		this.proprietario = proprietario;
 	}
 
-	public LocalDate getAnnoCreazione() {
+	public int getAnnoCreazione() {
 		return annoCreazione;
 	}
 
-	public void setAnnoCreazione(LocalDate annoCreazione) {
+	public void setAnnoCreazione(int annoCreazione) {
 		this.annoCreazione = annoCreazione;
 	}
+
+	public Set<ContattoTelefonico> getContatti() {
+		return contatti;
+	}
+
+	public void setContatti(Set<ContattoTelefonico> contatti) {
+		this.contatti = contatti;
+	}
+	
+	
 	
 	
 	
