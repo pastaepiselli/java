@@ -8,7 +8,6 @@
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="com.spring.universita.entity.Studente"/>
     <fullyQualifiedTypeName name="com.spring.universita.dto.StudenteDTO"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PatchMapping"/>
     <fullyQualifiedTypeName name="com.spring.universita.services.StudentiServices"/>
     <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="com.spring.universita.dto.CognomeAnnoNascitaDTO"/>
@@ -32,7 +31,6 @@
     <fullyQualifiedTypeName name="com.spring.magazzino.dto.ReportDTO"/>
     <fullyQualifiedTypeName name="com.spring.magazzino.mapper.Mapper"/>
     <fullyQualifiedTypeName name="com.spring.magazzino.dto.ProdottoDTONoId"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ExceptionHandler"/>
     <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
@@ -49,7 +47,6 @@
     <fullyQualifiedTypeName name="com.spring.apprubrica.mapper.Mapper"/>
     <fullyQualifiedTypeName name="com.spring.apprubrica.dao.DAORubriche"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
-    <fullyQualifiedTypeName name="com.spring.apprubrica.dto.NomePropNumeroTotDTO"/>
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
@@ -57,7 +54,10 @@
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="com.spring.apprubrica.service.RubricheService"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PatchMapping"/>
+    <fullyQualifiedTypeName name="com.spring.apprubrica.dto.NomePropNumeroTotDTO"/>
+    <fullyQualifiedTypeName name="com.spring.apprubrica.dto.RubricaPropAnnoCDTO"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="com.spring.apprubrica.dto.NomePropNumeroCDTO"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
-    <fullyQualifiedTypeName name="com.spring.apprubrica.dto.RubricaPropAnnoCDTO"/>
 </qualifiedTypeNameHistroy>
