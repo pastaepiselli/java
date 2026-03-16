@@ -92,6 +92,8 @@ public class RubricheController {
 		return service.visualizzaNomeNumeroContatti(id);
 	}
 	
+	// TODO: gestione degli errori
+	
 	
 	
 	

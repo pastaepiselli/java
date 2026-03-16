@@ -1,6 +1,7 @@
 package com.spring.apprubrica.entity;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class ContattoTelefonico {
 	private int id;
@@ -32,6 +33,10 @@ public class ContattoTelefonico {
 		// aggiorno counter
 		counter++;
 		
+	}
+	
+	public int getId() {
+		return id;
 	}
 
 	public String getNome() {
@@ -82,7 +87,24 @@ public class ContattoTelefonico {
 		this.preferito = preferito;
 	}
 	
-	// TODO: aggiungere equals + hashcode per hashset controllo 
+	// necessario per il controllo che una rubrica nn puo avere 2 contatti con nome e cognome uguale
+	@Override
+	public int hashCode() {
+		return Objects.hash(cognome, nome);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ContattoTelefonico other = (ContattoTelefonico) obj;
+		return Objects.equals(cognome, other.cognome) && Objects.equals(nome, other.nome);
+	}
 	
+		
 	
 }

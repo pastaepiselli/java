@@ -1,7 +1,9 @@
 package com.spring.apprubrica.dto;
 
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 import com.spring.apprubrica.entity.ContattoTelefonico;
@@ -10,7 +12,7 @@ public class RubricaDTO {
 	private int id;
 	private String proprietario; // nome
 	private int annoCreazione;
-	private Set<ContattoTelefonico> contatti = new HashSet<ContattoTelefonico>();
+	private Map<Integer, ContattoTelefonico> contatti = new HashMap<Integer, ContattoTelefonico>();
 	
 
 	
@@ -18,10 +20,11 @@ public class RubricaDTO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public RubricaDTO( String proprietario, int annoCreazione) {
+	public RubricaDTO( String proprietario, int annoCreazione, Map<Integer, ContattoTelefonico> contatti) {
 		super();
 		this.proprietario = proprietario;
 		this.annoCreazione = annoCreazione;
+		this.contatti = contatti;
 		
 		
 	}
@@ -50,11 +53,11 @@ public class RubricaDTO {
 		this.annoCreazione = annoCreazione;
 	}
 
-	public Set<ContattoTelefonico> getContatti() {
+	public Map<Integer, ContattoTelefonico> getContatti() {
 		return contatti;
 	}
 
-	public void setContatti(Set<ContattoTelefonico> contatti) {
+	public void setContatti(Map<Integer, ContattoTelefonico> contatti) {
 		this.contatti = contatti;
 	}
 

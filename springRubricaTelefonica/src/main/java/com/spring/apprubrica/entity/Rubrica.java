@@ -1,15 +1,16 @@
 package com.spring.apprubrica.entity;
 
-import java.time.LocalDate;
 import java.util.HashSet;
 
 import java.util.Set;
+import java.util.Map;
+import java.util.HashMap;
 
 public class Rubrica {
 	private int id;
 	private String proprietario; // nome
 	private int annoCreazione;
-	private Set<ContattoTelefonico> contatti = new HashSet<ContattoTelefonico>();
+	private	Map<Integer, ContattoTelefonico>contatti = new HashMap<Integer, ContattoTelefonico>();
 	
 	// counter
 	private static int counter = 0;
@@ -49,11 +50,11 @@ public class Rubrica {
 		this.annoCreazione = annoCreazione;
 	}
 
-	public Set<ContattoTelefonico> getContatti() {
+	public Map<Integer, ContattoTelefonico> getContatti() {
 		return contatti;
 	}
 
-	public void setContatti(Set<ContattoTelefonico> contatti) {
+	public void setContatti(Map<Integer, ContattoTelefonico> contatti) {
 		this.contatti = contatti;
 	}
 	
