@@ -16,7 +16,7 @@ public interface DAORubriche {
 	// metodi crud per i contatti
 	public void inserisciContatto(int rubricaId, ContattoTelefonico contatto);
 	public ContattoTelefonico cercaContatto(int rubricaId,int id);
-	public ContattoTelefonico modificaContatto(int rubricaId, ContattoTelefonico nuovoContatto);
+	public ContattoTelefonico modificaContatto(int rubricaId,ContattoTelefonico nuovoContatto);
 	public void eliminaContatto(int rubricaId, int id);
 	public List<ContattoTelefonico> visualizzaContatti(int rubricaId);
 	

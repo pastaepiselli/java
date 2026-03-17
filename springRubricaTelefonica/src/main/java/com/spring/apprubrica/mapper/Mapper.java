@@ -43,6 +43,7 @@ public class Mapper {
 				contatto.isPreferito());
 	}
 	
+	
 	public static ContattoTelefonico daContattoDTOAContatto(ContattoTelefonicoDTO contatto) {
 		return new ContattoTelefonico(contatto.getNome(),
 				contatto.getCognome(), 

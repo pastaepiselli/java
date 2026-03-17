@@ -21,7 +21,6 @@ public class ContattoTelefonicoDTO {
 	public ContattoTelefonicoDTO(String nome, String cognome, String numero, String gruppo, LocalDate dataNascita,
 			boolean preferito) {
 		super();
-		this.id = counter;
 		this.nome = nome;
 		this.cognome = cognome;
 		this.numero = numero;
@@ -29,9 +28,15 @@ public class ContattoTelefonicoDTO {
 		this.dataNascita = dataNascita;
 		this.preferito = preferito;
 		
-		// aggiorno counter
-		counter++;
 		
+	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getNome() {

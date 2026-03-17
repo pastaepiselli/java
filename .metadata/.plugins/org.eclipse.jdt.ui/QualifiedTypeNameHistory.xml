@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.spring.universita.dto.StudenteDTO"/>
     <fullyQualifiedTypeName name="com.spring.universita.services.StudentiServices"/>
     <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="com.spring.universita.dto.CognomeAnnoNascitaDTO"/>
     <fullyQualifiedTypeName name="com.spring.universita.dto.CognomeAnnoImmatricolazioneDTO"/>
     <fullyQualifiedTypeName name="com.spring.universita.entity.Professore"/>
     <fullyQualifiedTypeName name="com.spring.universita.dto.ProfessoreDTO"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
     <fullyQualifiedTypeName name="com.spring.universita.services.ProfessoriServices"/>
     <fullyQualifiedTypeName name="com.spring.base.music.Player"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
@@ -56,8 +54,10 @@
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="com.spring.apprubrica.service.RubricheService"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
-    <fullyQualifiedTypeName name="com.spring.apprubrica.dto.ContattoTelefonicoDTO"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
+    <fullyQualifiedTypeName name="com.spring.apprubrica.dto.ContattoTelefonicoDTO"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
 </qualifiedTypeNameHistroy>
