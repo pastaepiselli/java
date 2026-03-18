@@ -5,28 +5,19 @@
     <typeInfo handle="=Its-JavaEsercizi/src&lt;cartoleria{Articolo.java[Articolo" modifiers="1025" timestamp="1767784284867"/>
     <typeInfo handle="=Its-JavaEsercizi/src&lt;interfacce{Animale.java[Animale" modifiers="513" timestamp="1768911770344"/>
     <typeInfo handle="=Its-JavaEsercizi/src&lt;interfacce{Volatile.java[Volatile" modifiers="1025" timestamp="1768912037546"/>
-    <typeInfo handle="=Its-JavaEsercizi/\/usr\/lib\/jvm\/java-25-openjdk\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/25\/docs\/api\/=/=/module=/true=/&lt;java.util(Comparator.class[Comparator" modifiers="1537" timestamp="1768987378000"/>
     <typeInfo handle="=Its-JavaEsercizi/src&lt;traghetto{Veicolo.java[Veicolo" modifiers="1025" timestamp="1769171416122"/>
     <typeInfo handle="=Its-JavaEsercizi/src&lt;museo{Opera.java[Opera" modifiers="1025" timestamp="1769704484019"/>
     <typeInfo handle="=Its-JavaEsercizi/src&lt;studio_medico{Persona.java[Persona" modifiers="1025" timestamp="1769704679257"/>
-    <typeInfo handle="=Its-JavaEsercizi/\/usr\/lib\/jvm\/java-25-openjdk\/lib\/jrt-fs.jar`jdk.jdi=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/25\/docs\/api\/=/=/module=/true=/&lt;com.sun.tools.jdi(JDWP$Event$Composite$Events$Exception.class[Exception" modifiers="8" timestamp="1768987378000"/>
-    <typeInfo handle="=Its-JavaEsercizi/\/usr\/lib\/jvm\/java-25-openjdk\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/25\/docs\/api\/=/=/module=/true=/&lt;java.lang(Exception.class[Exception" modifiers="1" timestamp="1768987378000"/>
     <typeInfo handle="=Its-JavaEsercizi/src&lt;lambda{Criterio.java[Criterio" modifiers="513" timestamp="1770649736142"/>
     <typeInfo handle="=Its-JavaEsercizi/src&lt;strategy{Sconto.java[Sconto" modifiers="513" timestamp="1771182161067"/>
-    <typeInfo handle="=Its-JavaEsercizi/\/usr\/lib\/jvm\/java-25-openjdk\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/25\/docs\/api\/=/=/module=/true=/&lt;java.lang(Runnable.class[Runnable" modifiers="1537" timestamp="1768987378000"/>
-    <typeInfo handle="=Sudoku/\/usr\/lib\/jvm\/java-25-openjdk\/lib\/jrt-fs.jar`java.desktop=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/25\/docs\/api\/=/=/module=/true=/&lt;javax.swing(JButton.class[JButton" modifiers="33" timestamp="1768987378000"/>
-    <typeInfo handle="=Its-JavaEsercizi/\/usr\/lib\/jvm\/java-25-openjdk\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/25\/docs\/api\/=/=/module=/true=/&lt;java.lang(Thread.class[Thread" modifiers="33" timestamp="1768987378000"/>
     <typeInfo handle="=Its-JavaEsercizi/src&lt;adapter{Dipendente.java[Dipendente" modifiers="513" timestamp="1771412015723"/>
     <typeInfo handle="=Its-JavaEsercizi/src&lt;adapter{PaymentProcessor.java[PaymentProcessor" modifiers="513" timestamp="1771414309177"/>
-    <typeInfo handle="=Tetris/\/usr\/lib\/jvm\/java-25-openjdk\/lib\/jrt-fs.jar`java.desktop=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/25\/docs\/api\/=/=/module=/true=/&lt;javax.swing(JPanel.class[JPanel" modifiers="33" timestamp="1768987378000"/>
     <typeInfo handle="=Its-JavaEsercizi/src&lt;warehousing{Warehouse.java[Warehouse" modifiers="1" timestamp="1771846309444"/>
     <typeInfo handle="=springUniversita/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.universita.entity{Persona.java[Persona" modifiers="1025" timestamp="1772622550704"/>
-    <typeInfo handle="=spring01/\/usr\/lib\/jvm\/java-25-openjdk\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/25\/docs\/api\/=/=/maven.pomderived=/true=/&lt;java.util.function(IntBinaryOperator.class[IntBinaryOperator" modifiers="1537" timestamp="1768987378000"/>
     <typeInfo handle="=spring01/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.base.music{Instrument.java[Instrument" modifiers="513" timestamp="1772704409467"/>
     <typeInfo handle="=springProdottiMagazzino/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.magazzino.dao{DAOProdotti.java[DAOProdotti" modifiers="513" timestamp="1772986112013"/>
     <typeInfo handle="=springProdottiMagazzino/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.magazzino.service{ProdottoService.java[ProdottoService" modifiers="513" timestamp="1772986525872"/>
-    <typeInfo handle="=springRubricaTelefonica/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.apprubrica.dao{DAORubriche.java[DAORubriche" modifiers="513" timestamp="1773682376056"/>
-    <typeInfo handle="=springRubricaTelefonica/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.apprubrica.service{RubricheService.java[RubricheService" modifiers="513" timestamp="1773683722574"/>
-    <typeInfo handle="=springRubricaTelefonica/\/usr\/lib\/jvm\/java-25-openjdk\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/25\/docs\/api\/=/=/maven.pomderived=/true=/&lt;java.lang(Runtime.class[Runtime" modifiers="49" timestamp="1768987378000"/>
-    <typeInfo handle="=springProdottiMagazzino/\/usr\/lib\/jvm\/java-25-openjdk\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/25\/docs\/api\/=/=/maven.pomderived=/true=/&lt;java.lang(RuntimeException.class[RuntimeException" modifiers="33" timestamp="1768987378000"/>
+    <typeInfo handle="=springRubricaTelefonica/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.rubrica.dao{RubricaDAO.java[RubricaDAO" modifiers="513" timestamp="1773859729276"/>
+    <typeInfo handle="=springRubricaTelefonica/\/usr\/lib\/jvm\/java-26-openjdk\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/25\/docs\/api\/=/=/maven.pomderived=/true=/&lt;java.lang(RuntimeException.class[RuntimeException" modifiers="33" timestamp="1773778471000"/>
+    <typeInfo handle="=springRubricaTelefonica/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.rubrica.service{RubricheService.java[RubricheService" modifiers="513" timestamp="1773857111484"/>
 </typeInfoHistroy>
