@@ -18,6 +18,6 @@
     <typeInfo handle="=springProdottiMagazzino/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.magazzino.dao{DAOProdotti.java[DAOProdotti" modifiers="513" timestamp="1772986112013"/>
     <typeInfo handle="=springProdottiMagazzino/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.magazzino.service{ProdottoService.java[ProdottoService" modifiers="513" timestamp="1772986525872"/>
     <typeInfo handle="=springRubricaTelefonica/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.rubrica.dao{RubricaDAO.java[RubricaDAO" modifiers="513" timestamp="1773859729276"/>
+    <typeInfo handle="=springRubricaTelefonica/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.rubrica.service{RubricheService.java[RubricheService" modifiers="513" timestamp="1773914465861"/>
     <typeInfo handle="=springRubricaTelefonica/\/usr\/lib\/jvm\/java-26-openjdk\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/25\/docs\/api\/=/=/maven.pomderived=/true=/&lt;java.lang(RuntimeException.class[RuntimeException" modifiers="33" timestamp="1773778471000"/>
-    <typeInfo handle="=springRubricaTelefonica/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.spring.rubrica.service{RubricheService.java[RubricheService" modifiers="513" timestamp="1773857111484"/>
 </typeInfoHistroy>

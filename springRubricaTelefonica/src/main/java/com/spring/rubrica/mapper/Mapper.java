@@ -3,6 +3,7 @@ package com.spring.rubrica.mapper;
 import java.util.List;
 
 import com.spring.rubrica.dto.ContattoDTO;
+import com.spring.rubrica.dto.NomeCognomeDTO;
 import com.spring.rubrica.dto.PropAnnoDTO;
 import com.spring.rubrica.dto.PropNomiNumTotDTO;
 import com.spring.rubrica.dto.RubricaDTO;
@@ -36,7 +37,7 @@ public class Mapper {
 
 	
 	
-	// sadfsdfasdf
+	// contatti
 	public static Contatto daContattoDTOaContatto(ContattoDTO dto) {
 		return new Contatto(
 				dto.getId(),
@@ -47,6 +48,23 @@ public class Mapper {
 				dto.getDataNascita(), 
 				dto.isPreferito());
 	}
+	
+	public static ContattoDTO daContattoaContattoDTO(Contatto contatto) {
+		return new ContattoDTO(
+				contatto.getId(),
+				contatto.getNome(), 
+				contatto.getCognome(), 
+				contatto.getNumero(), 
+				contatto.getGruppo(),
+				contatto.getDataNascita(), 
+				contatto.isPreferito());
+	}
+	
+	public static NomeCognomeDTO daContattoaNomeCognomeDTO(Contatto contatto) {
+		return new NomeCognomeDTO(contatto.getNome(), contatto.getCognome());
+	}
+	
+	
 	
 	
 }

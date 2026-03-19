@@ -1,12 +1,9 @@
-package com.spring.rubrica.entity;
+package com.spring.rubrica.dto;
 
 import java.time.LocalDate;
-import java.util.Objects;
 
-import com.spring.rubrica.dto.ContattoNoIdDTO;
-
-public class Contatto {
-	private int id;
+/* dto che viene ricevuto per la modifica del contatto */
+public class ContattoNoIdDTO {
 	private String nome;
 	private String cognome;
 	private String numero;
@@ -14,30 +11,19 @@ public class Contatto {
 	private LocalDate dataNascita;
 	private boolean preferito;
 	
-	public Contatto() {
+	public ContattoNoIdDTO() {
 		super();
 	}
 
-	public Contatto(int id, String nome, String cognome, String numero, String gruppo, LocalDate dataNascita,
+	public ContattoNoIdDTO(String nome, String cognome, String numero, String gruppo, LocalDate dataNascita,
 			boolean preferito) {
 		super();
-		this.id = id;
 		this.nome = nome;
 		this.cognome = cognome;
 		this.numero = numero;
 		this.gruppo = gruppo;
 		this.dataNascita = dataNascita;
 		this.preferito = preferito;
-	}
-	
-	
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getNome() {
@@ -87,34 +73,5 @@ public class Contatto {
 	public void setPreferito(boolean preferito) {
 		this.preferito = preferito;
 	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(cognome, nome);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Contatto other = (Contatto) obj;
-		return Objects.equals(cognome, other.cognome) && Objects.equals(nome, other.nome);
-	}
-	
-	public void updateContatto(ContattoNoIdDTO dto) {
-		setNome(dto.getNome());
-		setCognome(dto.getCognome());
-		setNumero(dto.getNumero());
-		setGruppo(dto.getGruppo());
-		setDataNascita(dataNascita);
-		setPreferito(dto.isPreferito());
-		
-	}
-	
-	
 		
 }

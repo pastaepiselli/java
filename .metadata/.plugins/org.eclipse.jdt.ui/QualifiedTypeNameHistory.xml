@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.spring.universita.entity.Prodotto"/>
-    <fullyQualifiedTypeName name="com.spring.universita.mapper.Mapper"/>
-    <fullyQualifiedTypeName name="com.spring.prodotti.dto.ErroreDTO"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="javax.management.RuntimeErrorException"/>
     <fullyQualifiedTypeName name="com.spring.magazzino.dto.ProdottoDTO"/>
@@ -33,31 +30,34 @@
     <fullyQualifiedTypeName name="com.spring.apprubrica.entity.ContattoTelefonico"/>
     <fullyQualifiedTypeName name="com.spring.apprubrica.errors.IdNonEsistente"/>
     <fullyQualifiedTypeName name="com.spring.apprubrica.service.RubricheService"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
     <fullyQualifiedTypeName name="com.spring.apprubrica.dto.ContattoTelefonicoDTO"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
     <fullyQualifiedTypeName name="com.spring.rubrica.entity.Contatto"/>
     <fullyQualifiedTypeName name="com.spring.rubrica.mapper.Mapper"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="com.spring.rubrica.controller.RubricheController"/>
-    <fullyQualifiedTypeName name="com.spring.rubrica.service.RubricheService"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PatchMapping"/>
     <fullyQualifiedTypeName name="com.spring.rubrica.dto.PropNomiNumTotDTO"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="com.spring.rubrica.dto.PropAnnoDTO"/>
     <fullyQualifiedTypeName name="com.spring.rubrica.dto.RubricaDTO"/>
     <fullyQualifiedTypeName name="com.spring.rubrica.dto.ErroreDTO"/>
     <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ExceptionHandler"/>
     <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
-    <fullyQualifiedTypeName name="com.spring.rubrica.errori.ContattoEsistenteException"/>
     <fullyQualifiedTypeName name="com.spring.rubrica.errori.IdEsisteException"/>
     <fullyQualifiedTypeName name="com.spring.rubrica.errori.IdNonEsisteException"/>
+    <fullyQualifiedTypeName name="com.spring.rubrica.errori.ContattoEsistenteException"/>
+    <fullyQualifiedTypeName name="com.spring.rubrica.errori.ContattoNonEsiste"/>
+    <fullyQualifiedTypeName name="com.spring.rubrica.service.RubricheService"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+    <fullyQualifiedTypeName name="com.spring.rubrica.dto.ContattoNoIdDTO"/>
+    <fullyQualifiedTypeName name="com.spring.rubrica.dto.NomeCognomeDTO"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PatchMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
 </qualifiedTypeNameHistroy>
