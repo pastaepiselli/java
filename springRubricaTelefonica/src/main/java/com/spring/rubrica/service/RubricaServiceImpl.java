@@ -109,7 +109,8 @@ public class RubricaServiceImpl implements RubricheService {
 	// contatti
 	@Override
 	public ContattoDTO inserisciContatto(int idRubrica, ContattoDTO dto) {
-		return Mapper.daContattoaContattoDTO(dao.inserisci(idRubrica, null));
+		Contatto contatto = Mapper.daContattoDTOaContatto(dto);
+		return Mapper.daContattoaContattoDTO(dao.inserisci(idRubrica, contatto));
 	}
 
 	@Override

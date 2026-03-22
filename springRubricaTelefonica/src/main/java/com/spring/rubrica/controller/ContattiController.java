@@ -3,7 +3,10 @@ package com.spring.rubrica.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,7 +18,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.spring.rubrica.dto.ContattoDTO;
 import com.spring.rubrica.dto.ContattoNoIdDTO;
+import com.spring.rubrica.dto.ErroreDTO;
 import com.spring.rubrica.dto.NomeCognomeDTO;
+import com.spring.rubrica.errori.IdNonEsisteException;
 import com.spring.rubrica.service.RubricheService;
 
 @RestController
@@ -27,7 +32,7 @@ public class ContattiController {
 	
 	@PostMapping(path="", consumes="application/json", produces="application/json")
 	public ContattoDTO inserisciContatto(@PathVariable int idRubrica,@RequestBody ContattoDTO dto) {
-		return service.inserisciContatto(0, dto);
+		return service.inserisciContatto(idRubrica, dto);
 	}
 	
 	@GetMapping(path="/{idContatto}", produces="application/json")
@@ -84,6 +89,13 @@ public class ContattiController {
 	public List<ContattoDTO> visualizzaPreferiti(@PathVariable int idRubrica){
 		return service.visualizzaPreferiti(idRubrica);
 	}
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

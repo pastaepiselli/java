@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="javax.management.RuntimeErrorException"/>
     <fullyQualifiedTypeName name="com.spring.magazzino.dto.ProdottoDTO"/>
     <fullyQualifiedTypeName name="com.spring.magazzino.entity.Prodotto"/>
     <fullyQualifiedTypeName name="com.spring.magazzino.dto.ReportDTO"/>
     <fullyQualifiedTypeName name="com.spring.magazzino.mapper.Mapper"/>
     <fullyQualifiedTypeName name="com.spring.magazzino.dto.ProdottoDTONoId"/>
-    <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
     <fullyQualifiedTypeName name="java.lang.IllegalAccessException"/>
     <fullyQualifiedTypeName name="com.spring.magazzino.errori.ProdottoNonEsisteException"/>
     <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
@@ -39,13 +36,7 @@
     <fullyQualifiedTypeName name="com.spring.rubrica.dto.PropNomiNumTotDTO"/>
     <fullyQualifiedTypeName name="com.spring.rubrica.dto.PropAnnoDTO"/>
     <fullyQualifiedTypeName name="com.spring.rubrica.dto.RubricaDTO"/>
-    <fullyQualifiedTypeName name="com.spring.rubrica.dto.ErroreDTO"/>
-    <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ExceptionHandler"/>
     <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
-    <fullyQualifiedTypeName name="com.spring.rubrica.errori.IdEsisteException"/>
-    <fullyQualifiedTypeName name="com.spring.rubrica.errori.IdNonEsisteException"/>
-    <fullyQualifiedTypeName name="com.spring.rubrica.errori.ContattoEsistenteException"/>
     <fullyQualifiedTypeName name="com.spring.rubrica.errori.ContattoNonEsiste"/>
     <fullyQualifiedTypeName name="com.spring.rubrica.service.RubricheService"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
@@ -60,4 +51,13 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PatchMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="com.spring.rubrica.errori.IdNonEsisteException"/>
+    <fullyQualifiedTypeName name="com.spring.rubrica.dto.ErroreDTO"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ControllerAdvice"/>
+    <fullyQualifiedTypeName name="com.spring.rubrica.errori.IdEsisteException"/>
+    <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ExceptionHandler"/>
+    <fullyQualifiedTypeName name="com.spring.rubrica.errori.ContattoEsistenteException"/>
+    <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
+    <fullyQualifiedTypeName name="org.springframework.http.HttpStatusCode"/>
 </qualifiedTypeNameHistroy>
