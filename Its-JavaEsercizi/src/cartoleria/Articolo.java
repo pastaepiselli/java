@@ -31,6 +31,6 @@ public abstract class Articolo {
 		return "Articolo marca=" + marca + ", modello=" + modello + ", costo=" + costo + ", prezzoVendita="
 				+ prezzoVendita;
 	}
-	
+
 
 }
