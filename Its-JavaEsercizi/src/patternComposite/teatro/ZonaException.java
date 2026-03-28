@@ -1,4 +1,4 @@
-package compositeTeatro;
+package patternComposite.teatro;
 
 @SuppressWarnings("serial")
 public class ZonaException extends Exception {

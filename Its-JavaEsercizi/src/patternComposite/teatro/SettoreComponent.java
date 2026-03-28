@@ -1,4 +1,4 @@
-package compositeTeatro;
+package patternComposite.teatro;
 
 // component
 public abstract class SettoreComponent {

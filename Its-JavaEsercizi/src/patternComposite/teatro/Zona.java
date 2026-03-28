@@ -1,4 +1,4 @@
-package compositeTeatro;
+package patternComposite.teatro;
 
 import java.util.ArrayList;
 import java.util.List;

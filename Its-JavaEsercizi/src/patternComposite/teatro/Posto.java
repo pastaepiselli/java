@@ -1,4 +1,4 @@
-package compositeTeatro;
+package patternComposite.teatro;
 
 public class Posto {
 	private char fila;
