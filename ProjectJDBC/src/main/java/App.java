@@ -1,140 +1,83 @@
-import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.List;
-import java.util.Scanner;
-
-import database.LibroDAO;
-import database.LibroDTO;
+import java.sql.Statement;
+import java.sql.Connection;
 
 public class App {
-	public Scanner sc = new Scanner(System.in);
-
-	public static void main(String[] args) {
-
-		// tipo db + porta + database dove vuoi conneterti
-		final String url = "jdbc:postgresql://localhost:5432/biblioteca";
-		final String user = "postgres";
-		final String psw = "postgres";
-
-		// connettiamo al db
-
-		LibroDAO libroDao = new LibroDAO();
-//		LibroDTO libro1 = new LibroDTO("Informatica per tutti", "Rob del", 9.99);
-//		boolean ok = libroDao.insert(libro1);
-//		if (ok) {
-//			System.out.println("Libro inserito con id: "+ libro1.getId());
+	private static final String url = "jdbc:postgresql://localhost:5432/valorant";
+	private static final String user = "postgres";
+	private static final String passw = "postgres";
+	public static void main(String[] args) throws SQLException {
+		/* per connettermi al db utilizzo il metodo statico getConnection() di DriverManager
+		 * questo metodo ritorna un interfaccia connection
+		 */
+		
+		
+		Connection connection = DriverManager.getConnection(url, user, passw);
+		
+		/*
+		 * ora che ho la connection (sessione di dialogo con il db)
+		 * posso preparare le query, creare Statement
+		 */
+		
+		Statement statement = connection.createStatement();
+		
+	
+		
+		/*
+		 * con l'interfaccia statement posso eseguire query
+		 */
+		
+		// executeUpdate() utilizzato per DELETE, INSERT, UPDATE
+//		String querySql = "insert into valorant "
+//				+ "(enemy_team, my_team, agent, kill, death, assist, mappa, some1_afk, id)"
+//				+ "values("
+//				+ "array['clove', 'fade', 'phoenix', 'sage', 'reyna'],"
+//				+ "array['vyse', 'miks', 'reyna', 'iso', 'skye'],"
+//				+ "'skye',"
+//				+ "5, 9, 5, 'Pearl', false, 1)";
+//		
+//		
+//		statement.executeUpdate(querySql);
+		
+		/* executeQuery() utilizzato per select
+		 * restituisce un oggetto ResultSet, un cursore per navigare la tabella ritornata
+		 */
+		
+		String querySql = "select * from valorant";
+		
+		
+		ResultSet rs = statement.executeQuery(querySql);
+		
+//		while (rs.next()) {
+//			System.out.println(rs.getArray("enemy_team"));
+//			System.out.println(rs.getArray("my_team"));
 //			
-//		}else {
-//			System.out.println("Libro non inserito");
 //		}
 		
-		stampaLibri();
+		/*
+		 * con PreparedStatement viene inviato lo scheletro della query  con'?' 
+		 * es. select agente from valorant where agente = ?;
+		 * 1) evita sql injection
+		 * 2) evita concatenazione manuale di java con + o 
+		 */
+		String querySql1 = "select id from valorant where agent = ?";
 		
-	
-
-
-		// creo la query
-		//			String insertSql = "Insert into libro(titolo, autore, prezzo) values(?, ?, ?)";
-		//			try (PreparedStatement psInsert=conn.prepareStatement(insertSql)){
-		//				
-		//				// imposto i valori
-		//				psInsert.setString(1, "La Bibbia");
-		//				psInsert.setString(2, "Sconosciuto");
-		//				psInsert.setDouble(3, 40);
-		//				
-		//				// esegui query 
-		//				int righe = psInsert.executeUpdate(); // mi salvo le righe aggiunte
-		//				System.out.println("Ho inserito " + righe + " righe");
-		//			}
-		//			
-		// select
-
-		//			String selectSql = "select id, titolo, autore, prezzo from libro"; 
-		//			try (PreparedStatement psSelect=conn.prepareStatement(selectSql)){
-		//				// result set sarebbe il tipo di dato della tabella
-		//				ResultSet rs = psSelect.executeQuery();
-		//				
-		//				System.out.println("------- Lista Libri --------");
-		//				while(rs.next()) {
-		//					int id = rs.getInt("id");
-		//					String titolo = rs.getString("titolo");
-		//					String autore = rs.getString("autore");
-		//					double prezzo = rs.getDouble("prezzo");
-		//					
-		//					System.out.println(id + "-" + titolo + "-" + autore + "-" + prezzo);
-		//				}
-		//				
-		//				
-		//			}
-		//			insertLibroDb(conn, "La bibbia 2", "Sconosciuto", 50);
-		//			selectLibri(conn);
-		//			
-		//			conn.close();
-
-	}
-	
-	public static void stampaLibri() {
-		try {
-			List<LibroDTO> libri = LibroDAO.findAll();
-			
-			if (libri.isEmpty()) {
-				System.out.println("Nessun libro inserito");
-			} else {
-				for (LibroDTO l : libri) {
-					 System.out.println(l);
-				}
-				
-			}
-			
-			
-			
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		PreparedStatement ps = connection.prepareStatement(querySql1);
+		ps.setString(1, "jett");
+		ResultSet rs1 = ps.executeQuery();
+		
+		while (rs1.next()) {
+			System.out.println(rs1.getInt("id"));
 		}
 		
-	}
+	
 		
-	// funzione inserimento
-	static void insertLibroDb(Connection conn, String titolo, String autore, double prezzo) throws SQLException { // passo la connessione
-		String insertSql = "insert into libro(titolo, autore, prezzo) values (?, ?, ?)";
-
-
-		PreparedStatement psInsert=conn.prepareStatement(insertSql);
-		// imposto i valori
-		psInsert.setString(1, titolo);
-		psInsert.setString(2, autore);
-		psInsert.setDouble(3, prezzo);
-
-		// esegui query 
-		int righe = psInsert.executeUpdate(); // mi salvo le righe aggiunte
-		System.out.println("Ho inserito " + righe + " righe");
-
-
+		
+		
+		
+		
 	}
-
-	static void selectLibri(Connection conn) throws SQLException {
-		String selectLibri = "select id, titolo, autore, prezzo from libro";
-
-		PreparedStatement psSelect = conn.prepareStatement(selectLibri);
-
-		ResultSet rs = psSelect.executeQuery();
-		while (rs.next()) { // finche rs ha un valore successivo
-			int id = rs.getInt("id");
-			String titolo = rs.getString("titolo");
-			String autore = rs.getString("autore");
-			double prezzo = rs.getDouble("prezzo");
-
-			System.out.println(id + "-" + titolo + "-" + autore + "-" + prezzo);
-
-		}
-	} 
-
-	static void deleteLibro() {
-
-	}
-
 }
