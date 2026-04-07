@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.spring.apprubrica.entity.ContattoTelefonico"/>
-    <fullyQualifiedTypeName name="com.spring.apprubrica.errors.IdNonEsistente"/>
     <fullyQualifiedTypeName name="com.spring.apprubrica.service.RubricheService"/>
     <fullyQualifiedTypeName name="com.spring.apprubrica.dto.ContattoTelefonicoDTO"/>
     <fullyQualifiedTypeName name="com.spring.rubrica.entity.Contatto"/>
@@ -43,8 +41,6 @@
     <fullyQualifiedTypeName name="factoryPattern.CsvExporter"/>
     <fullyQualifiedTypeName name="factoryPattern.dto.CategoryDTO"/>
     <fullyQualifiedTypeName name="factoryPattern.database.Database"/>
-    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
-    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="factoryPattern.DataExport"/>
     <fullyQualifiedTypeName name="factoryPattern.FactoryDataExport"/>
@@ -60,4 +56,8 @@
     <fullyQualifiedTypeName name="patternComposite.folderFile.FileLeaf"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="patternComposite.folderFile.FileLeafException"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 </qualifiedTypeNameHistroy>

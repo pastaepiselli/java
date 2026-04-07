@@ -1,0 +1,9 @@
+2026-04-07 - addizione SUCCESSO
+2026-04-07 - addizione SUCCESSO
+2026-04-07 - addizione SUCCESSO
+2026-04-07 - sottrazione SUCCESSO
+2026-04-07 - sottrazione SUCCESSO
+2026-04-07 - moltiplicazione SUCCESSO
+2026-04-07 - moltiplicazione SUCCESSO
+2026-04-07 - moltiplicazione SUCCESSO
+2026-04-07 - divisione ERRORE: Divisione con 0 non permessa
