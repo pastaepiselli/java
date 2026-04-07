@@ -3,7 +3,6 @@
     <typeInfo handle="=Its-JavaEsercizi/src&lt;azienda{Impiegato.java[Impiegato" modifiers="1" timestamp="1769612802008"/>
     <typeInfo handle="=Its-JavaEsercizi/src&lt;cartoleria{Cliente.java[Cliente" modifiers="1025" timestamp="1767783504762"/>
     <typeInfo handle="=Its-JavaEsercizi/src&lt;cartoleria{Articolo.java[Articolo" modifiers="1025" timestamp="1774446733293"/>
-    <typeInfo handle="=Its-JavaEsercizi/src&lt;interfacce{Animale.java[Animale" modifiers="513" timestamp="1768911770344"/>
     <typeInfo handle="=Its-JavaEsercizi/src&lt;interfacce{Volatile.java[Volatile" modifiers="1025" timestamp="1768912037546"/>
     <typeInfo handle="=Its-JavaEsercizi/src&lt;traghetto{Veicolo.java[Veicolo" modifiers="1025" timestamp="1769171416122"/>
     <typeInfo handle="=Its-JavaEsercizi/src&lt;museo{Opera.java[Opera" modifiers="1025" timestamp="1769704484019"/>
@@ -23,4 +22,5 @@
     <typeInfo handle="=Factory/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;factoryPattern{DataExport.java[DataExport" modifiers="513" timestamp="1774457984968"/>
     <typeInfo handle="=Its-JavaEsercizi/\/usr\/lib\/jvm\/java-26-openjdk\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/25\/docs\/api\/=/=/module=/true=/&lt;java.lang(Exception.class[Exception" modifiers="33" timestamp="1773778471000"/>
     <typeInfo handle="=Its-JavaEsercizi/src&lt;patternComposite.folderFile{FolderComponent.java[FolderComponent" modifiers="1025" timestamp="1774720465995"/>
+    <typeInfo handle="=Its-JavaEsercizi/src&lt;interfacce{Animale.java[Animale" modifiers="513" timestamp="1768911770344"/>
 </typeInfoHistroy>
