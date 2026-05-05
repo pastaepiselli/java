@@ -28,6 +28,7 @@ findIndicationColor=255,253,208
 fullcoverage_color=173,230,173
 fullcoverage_color,defaultValueBeforeOverriddenFromCSS=192,255,192
 matchingTagIndicationColor=214,214,214
+matchingTagIndicationColor,defaultValueBeforeOverriddenFromCSS=212,212,212
 nocoverage_color=230,145,145
 nocoverage_color,defaultValueBeforeOverriddenFromCSS=255,160,160
 occurrenceIndicationColor=212,212,212

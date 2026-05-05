@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <libraryInfos>
-    <libraryInfo home="/usr/lib/jvm/java-26-openjdk" version="26.0.2"/>
+    <libraryInfo home="/usr/lib/jvm/java-26-openjdk" version="26.0.1"/>
     <libraryInfo home="/usr/lib/eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.8.v20250724-1412/jre" version="21.0.8"/>
-    <libraryInfo home="/usr/lib/jvm/java-21-openjdk" version="21.0.10"/>
+    <libraryInfo home="/usr/lib/jvm/java-21-openjdk" version="21.0.11"/>
     <libraryInfo home="/usr/lib/jvm/java-25-openjdk" version="25.0.2"/>
-    <libraryInfo home="/usr/lib/jvm/java-11-openjdk" version="11.0.30"/>
-    <libraryInfo home="/usr/lib/jvm/java-8-openjdk" version="1.8.0_482">
+    <libraryInfo home="/usr/lib/jvm/java-11-openjdk" version="11.0.31"/>
+    <libraryInfo home="/usr/lib/jvm/java-17-openjdk" version="17.0.19"/>
+    <libraryInfo home="/usr/lib/jvm/java-8-openjdk" version="1.8.0_492">
         <bootpath>
             <entry path="/usr/lib/jvm/java-8-openjdk/jre/lib/resources.jar"/>
             <entry path="/usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar"/>

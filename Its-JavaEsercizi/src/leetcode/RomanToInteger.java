@@ -16,13 +16,14 @@ public class RomanToInteger {
         roman.put('M', 1000);
 
         for (int i = 0; i < s.length() - 1; i++){
+        	// se il carattere precedente e minore sottraggo
             if (roman.get(s.charAt(i)) < roman.get(s.charAt(i + 1))){
                 res -= roman.get(s.charAt(i));
-            } else {
+            } else { // se il carattere e maggiore aggiungo
                 res += roman.get(s.charAt(i));
             }
         }
-
+        // nel ciclo interrompo all'ultimo carattere cosi aggiungo alla fine 
         return res + roman.get(s.charAt(s.length() - 1)) ;
     }
 }
